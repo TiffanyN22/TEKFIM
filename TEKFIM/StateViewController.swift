@@ -43,9 +43,12 @@ class StateViewController: UIViewController {
 
 extension StateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.backgroundColor = UIColor(named: "TekfimNavy")
         tableView.deselectRow(at: indexPath, animated: true) //deselect or unhghlight app, indexPath is position
       
-        //todo: navigation
+        //navigate to polician select page
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PoliticianSelect") as! PoliticianSelectViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -54,13 +57,12 @@ extension StateViewController: UITableViewDataSource {
         return StateViewController.states.count;
     }
     
-    //dequeue cell: use template over and over to get instance, then figure cell to configure icon and text
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell", for:indexPath) //indentifier is name from main storyboard
-        cell.textLabel?.text = StateViewController.states[indexPath.row] //position of cell in tableview
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell", for:indexPath)
+        cell.textLabel?.text = StateViewController.states[indexPath.row]
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
-//        cell.StateIcon = UIImage(named: "icons8-alabama-50")
+        
         if(indexPath.row % 2 == 0){
             cell.backgroundColor = UIColor(named: "TekfimGray")
         } else{

@@ -123,7 +123,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ejl-YG-4sw">
                                 <rect key="frame" x="0.0" y="172" width="393" height="646"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" name="TekfimGray"/>
+                                <color key="sectionIndexBackgroundColor" name="TekfimBlue"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StateCell" id="4JX-Wl-1q8">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -168,9 +168,77 @@
             </objects>
             <point key="canvasLocation" x="1121.3740458015266" y="107.74647887323944"/>
         </scene>
+        <!--Politician Select View Controller-->
+        <scene sceneID="fJg-Td-Ehx">
+            <objects>
+                <viewController storyboardIdentifier="PoliticianSelect" id="2UU-3a-mKt" customClass="PoliticianSelectViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huf-m9-Qsb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Politician" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yY-g7-3LC">
+                                <rect key="frame" x="45" y="113" width="303" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" name="TekfimGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senators" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuD-6t-Q1I">
+                                <rect key="frame" x="0.0" y="175" width="393" height="55"/>
+                                <color key="backgroundColor" name="TekfimBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5Ku-AC-eXj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <color key="textColor" name="TekfimNavy"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="28f-oW-wgg">
+                                <rect key="frame" x="0.0" y="274" width="393" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="qqF-U7-L8V"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SenatorCell" id="N0g-7G-Gav">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N0g-7G-Gav" id="pvY-Jd-VlH">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8HA-MD-hY1"/>
+                        <color key="backgroundColor" name="TekfimNavy"/>
+                        <constraints>
+                            <constraint firstItem="6yY-g7-3LC" firstAttribute="top" secondItem="8HA-MD-hY1" secondAttribute="top" constant="54" id="6cR-Dp-ZiU"/>
+                            <constraint firstItem="QuD-6t-Q1I" firstAttribute="top" secondItem="6yY-g7-3LC" secondAttribute="bottom" constant="26" id="95H-T0-34n"/>
+                            <constraint firstItem="28f-oW-wgg" firstAttribute="top" secondItem="QuD-6t-Q1I" secondAttribute="bottom" id="9jY-w0-1vO"/>
+                            <constraint firstItem="8HA-MD-hY1" firstAttribute="trailing" secondItem="28f-oW-wgg" secondAttribute="trailing" id="Ihe-BX-fzi"/>
+                            <constraint firstItem="QuD-6t-Q1I" firstAttribute="leading" secondItem="8HA-MD-hY1" secondAttribute="leading" id="JYl-WU-3Xa"/>
+                            <constraint firstItem="28f-oW-wgg" firstAttribute="centerX" secondItem="8HA-MD-hY1" secondAttribute="centerX" id="Q60-UY-1Mr"/>
+                            <constraint firstItem="6yY-g7-3LC" firstAttribute="centerX" secondItem="8HA-MD-hY1" secondAttribute="centerX" id="aPV-RJ-pFC"/>
+                            <constraint firstItem="8HA-MD-hY1" firstAttribute="trailing" secondItem="QuD-6t-Q1I" secondAttribute="trailing" id="ax2-iM-5gH"/>
+                            <constraint firstItem="28f-oW-wgg" firstAttribute="leading" secondItem="8HA-MD-hY1" secondAttribute="leading" id="jjG-gg-eUx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nX7-UV-lka"/>
+                    <connections>
+                        <outlet property="senatorsTable" destination="28f-oW-wgg" id="0y4-1q-3s8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNj-sU-EHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1872.5190839694656" y="107.74647887323944"/>
+        </scene>
     </scenes>
     <resources>
         <image name="TEKFIM Logo" width="780" height="787"/>
+        <namedColor name="TekfimBlue">
+            <color red="0.6549019814" green="0.7254902124" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="TekfimGray">
             <color red="0.90196073060000004" green="0.90196073060000004" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
