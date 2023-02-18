@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifT-KH-iLu">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="zB7-xz-Mu0" kind="relationship" relationship="rootViewController" id="uLv-2X-uBH"/>
+                        <segue destination="zB7-xz-Mu0" kind="relationship" relationship="rootViewController" id="kuT-gL-o0p"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86h-my-19o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -31,17 +32,109 @@
                     <view key="view" contentMode="scaleToFill" id="GIH-DU-DnR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qt7-Ag-lzI">
+                                <rect key="frame" x="108.66666666666669" y="382" width="176" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Make Tiffany Happy"/>
+                                <connections>
+                                    <segue destination="ota-zF-FhY" kind="show" id="rfR-oO-YYJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="B0b-UK-zFv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qt7-Ag-lzI" firstAttribute="top" secondItem="B0b-UK-zFv" secondAttribute="top" constant="279" id="jez-8P-dIR"/>
+                            <constraint firstItem="Qt7-Ag-lzI" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="wc4-86-dFY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="59p-Ye-8kL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Od7-EP-7fd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="103"/>
+            <point key="canvasLocation" x="263" y="108"/>
+        </scene>
+        <!--Voting View Controller-->
+        <scene sceneID="oGM-C6-Jeq">
+            <objects>
+                <viewController id="ota-zF-FhY" customClass="VotingViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FGx-eX-MEq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVf-A0-dKI">
+                                <rect key="frame" x="0.0" y="154" width="393" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to see?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0D-aF-kCh">
+                                        <rect key="frame" x="91" y="347" width="211" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEr-nP-kb5">
+                                        <rect key="frame" x="88" y="41" width="216.33333333333331" height="58"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-Dd-kBx">
+                                        <rect key="frame" x="88" y="191" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFM-ka-mwk">
+                                        <rect key="frame" x="88" y="138" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="te1-1V-OFj">
+                                        <rect key="frame" x="41" y="408" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75686274509999996" green="0.35294117650000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1764705882" green="0.20000000000000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bEr-nP-kb5" firstAttribute="centerX" secondItem="VVf-A0-dKI" secondAttribute="centerX" id="Izd-Vg-tmu"/>
+                                    <constraint firstAttribute="height" constant="715" id="aGf-E2-r0v"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Voting Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPF-5u-qWg">
+                                <rect key="frame" x="130" y="103" width="132" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4zm-eT-qHW"/>
+                        <color key="backgroundColor" name="TekfimNavy"/>
+                        <constraints>
+                            <constraint firstItem="VVf-A0-dKI" firstAttribute="top" secondItem="4zm-eT-qHW" secondAttribute="top" constant="51" id="2F4-QH-EYU"/>
+                            <constraint firstItem="hPF-5u-qWg" firstAttribute="centerX" secondItem="4zm-eT-qHW" secondAttribute="centerX" id="83o-mV-Ubs"/>
+                            <constraint firstItem="hPF-5u-qWg" firstAttribute="width" secondItem="FGx-eX-MEq" secondAttribute="width" multiplier="0.335878" id="QfH-nK-UkH"/>
+                            <constraint firstItem="bEr-nP-kb5" firstAttribute="top" secondItem="4zm-eT-qHW" secondAttribute="top" constant="92" id="brb-F8-GKM"/>
+                            <constraint firstItem="hPF-5u-qWg" firstAttribute="top" secondItem="4zm-eT-qHW" secondAttribute="top" id="eJe-j4-tEI"/>
+                            <constraint firstItem="VVf-A0-dKI" firstAttribute="width" secondItem="FGx-eX-MEq" secondAttribute="width" id="ma4-zC-gEi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAM-3i-NIX"/>
+                    <connections>
+                        <outlet property="Map" destination="te1-1V-OFj" id="Dbs-ae-IKC"/>
+                        <outlet property="view" destination="te1-1V-OFj" id="mDf-xa-foA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dnq-oV-evS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310.6870229007634" y="107.74647887323944"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="TekfimNavy">
+            <color red="0.1803921568627451" green="0.20000000000000001" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
