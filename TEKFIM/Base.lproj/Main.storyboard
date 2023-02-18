@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifT-KH-iLu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hb7-eq-yoc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -16,91 +16,185 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="zB7-xz-Mu0" kind="relationship" relationship="rootViewController" id="uLv-2X-uBH"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86h-my-19o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-643" y="109"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="80O-NY-pCR">
+        <!--Login Controller-->
+        <scene sceneID="be4-Yw-8A9">
             <objects>
-                <viewController id="zB7-xz-Mu0" customClass="HomeViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GIH-DU-DnR">
+                <viewController id="hb7-eq-yoc" customClass="LoginController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fTR-pX-R3K" customClass="LoginController">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TEKFIM Logo" translatesAutoresizingMaskIntoConstraints="NO" id="nqq-Y2-ZYs">
-                                <rect key="frame" x="107" y="158" width="179" height="174"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="179" id="EMe-gP-0ew"/>
-                                    <constraint firstAttribute="height" constant="174" id="jWS-kd-rB1"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Politician Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-9d-oQb">
-                                <rect key="frame" x="98.666666666666686" y="387" width="196" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="z26-oZ-ful">
+                                <rect key="frame" x="68" y="153" width="256" height="547.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TEKFIM Logo" translatesAutoresizingMaskIntoConstraints="NO" id="nqq-Y2-ZYs">
+                                        <rect key="frame" x="38.666666666666657" y="0.0" width="179" height="174"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="179" id="EMe-gP-0ew"/>
+                                            <constraint firstAttribute="height" constant="174" id="jWS-kd-rB1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="presented by TEKFIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndL-0Q-8zd">
+                                        <rect key="frame" x="7.3333333333333286" y="212" width="241.33333333333337" height="29.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" name="TekfimNavy"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="dY3-ll-jH0">
+                                        <rect key="frame" x="0.0" y="279.33333333333331" width="256" height="116"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLZ-jg-v0J">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="f9h-A0-RIY"/>
+                                                    <constraint firstAttribute="width" constant="256" id="tRE-FB-VsC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XMA-tu-yiS">
+                                                <rect key="frame" x="0.0" y="76" width="256" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="256" id="5aA-sd-rLo"/>
+                                                    <constraint firstAttribute="height" constant="40" id="xdZ-na-cPE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kdJ-J1-LAa">
+                                        <rect key="frame" x="28" y="433.33333333333331" width="200" height="114.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT7-O5-vSg">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="67U-qt-5KO"/>
+                                                    <constraint firstAttribute="width" constant="200" id="6hX-kT-VOG"/>
+                                                </constraints>
+                                                <color key="tintColor" name="TekfimNavy"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="medium" titleAlignment="center">
+                                                    <color key="baseForegroundColor" name="TekfimGray"/>
+                                                    <color key="baseBackgroundColor" name="TekfimNavy"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="hb7-eq-yoc" kind="show" id="zdV-e2-TEE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-hf-5Cq">
+                                                <rect key="frame" x="0.0" y="80.000000000000057" width="200" height="34.333333333333343"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="fTn-MP-gua"/>
+                                                </constraints>
+                                                <color key="tintColor" name="TekfimNavy"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Sign Up" cornerStyle="medium" titleAlignment="center">
+                                                    <color key="baseForegroundColor" name="TekfimGray"/>
+                                                    <color key="baseBackgroundColor" name="TekfimRed"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="LTl-Rk-OZQ" kind="show" id="u9U-Pm-4be"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2hs-w1-sjg"/>
+                        <color key="backgroundColor" name="TekfimRed"/>
+                        <connections>
+                            <outlet property="loginButt" destination="bT7-O5-vSg" id="YFt-4s-nP0"/>
+                            <outlet property="password" destination="XMA-tu-yiS" id="Ikp-6h-TUR"/>
+                            <outlet property="signUpButt" destination="WHL-hf-5Cq" id="5Yk-TE-clf"/>
+                            <outlet property="username" destination="DLZ-jg-v0J" id="5mw-KE-uD1"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="n4I-Dh-ALq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hi-A3-HUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223.6641221374045" y="107.74647887323944"/>
+        </scene>
+        <!--New Account Controller-->
+        <scene sceneID="cGm-J5-MuG">
+            <objects>
+                <viewController id="LTl-Rk-OZQ" customClass="NewAccountController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5RO-Gf-JzX" customClass="SignUpController">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4R-il-LND">
+                                <rect key="frame" x="109" y="112.33333333333333" width="176" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" name="TekfimNavy"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="presented by TEKFIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndL-0Q-8zd">
-                                <rect key="frame" x="75" y="447" width="242" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="25"/>
-                                <color key="textColor" name="TekfimNavy"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT7-O5-vSg">
-                                <rect key="frame" x="96.666666666666686" y="524" width="200" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="67U-qt-5KO"/>
-                                    <constraint firstAttribute="width" constant="200" id="6hX-kT-VOG"/>
-                                </constraints>
-                                <color key="tintColor" name="TekfimNavy"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="RTB-yo-cIv">
+                                <rect key="frame" x="76" y="156" width="256" height="202"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-8W-bUk">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dW5-Oh-0rJ"/>
+                                            <constraint firstAttribute="width" constant="256" id="mKw-3H-TR0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaC-aU-jMV">
+                                        <rect key="frame" x="0.0" y="81" width="256" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8Ak-05-6sx"/>
+                                            <constraint firstAttribute="width" constant="256" id="sn5-wL-bHx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epN-o2-aJI">
+                                        <rect key="frame" x="0.0" y="162.00000000000003" width="256" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="dqj-oW-U7V"/>
+                                            <constraint firstAttribute="width" constant="256" id="ff7-ZS-gSy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMV-7i-dIw">
+                                <rect key="frame" x="76" y="420" width="256" height="34.333333333333314"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.65296099429999999" blue="0.46044334040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Learn about your legislators" cornerStyle="medium" titleAlignment="center">
-                                    <color key="baseForegroundColor" name="TekfimGray"/>
-                                    <color key="baseBackgroundColor" name="TekfimNavy"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-hf-5Cq">
-                                <rect key="frame" x="97" y="612" width="200" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="fTn-MP-gua"/>
-                                </constraints>
-                                <color key="tintColor" name="TekfimNavy"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Find Voting Resources Where You Live" cornerStyle="medium" titleAlignment="center">
-                                    <color key="baseForegroundColor" name="TekfimGray"/>
-                                    <color key="baseBackgroundColor" name="TekfimNavy"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                    <color key="baseBackgroundColor" red="0.20392156859999999" green="0.65296099429999999" blue="0.46044334040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="B0b-UK-zFv"/>
+                        <viewLayoutGuide key="safeArea" id="77a-Id-eBf"/>
                         <color key="backgroundColor" name="TekfimRed"/>
                         <constraints>
-                            <constraint firstItem="WHL-hf-5Cq" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="0CL-Mt-PKv"/>
-                            <constraint firstItem="nqq-Y2-ZYs" firstAttribute="top" secondItem="B0b-UK-zFv" secondAttribute="top" constant="55" id="1Nb-4a-XmH"/>
-                            <constraint firstItem="VMX-9d-oQb" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="E8J-h9-b0a"/>
-                            <constraint firstItem="VMX-9d-oQb" firstAttribute="top" secondItem="nqq-Y2-ZYs" secondAttribute="bottom" constant="55" id="GDJ-KF-azQ"/>
-                            <constraint firstItem="WHL-hf-5Cq" firstAttribute="top" secondItem="bT7-O5-vSg" secondAttribute="bottom" constant="24" id="QmD-GO-MQZ"/>
-                            <constraint firstItem="nqq-Y2-ZYs" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="a9v-hp-OcT"/>
-                            <constraint firstItem="ndL-0Q-8zd" firstAttribute="top" secondItem="VMX-9d-oQb" secondAttribute="bottom" constant="18" id="ayr-Vm-5SM"/>
-                            <constraint firstItem="ndL-0Q-8zd" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="o2k-ow-jaT"/>
-                            <constraint firstItem="bT7-O5-vSg" firstAttribute="top" secondItem="ndL-0Q-8zd" secondAttribute="bottom" constant="53" id="pYW-Qy-j8p"/>
-                            <constraint firstItem="bT7-O5-vSg" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="u8Z-mY-qGG"/>
+                            <constraint firstItem="GMV-7i-dIw" firstAttribute="top" secondItem="RTB-yo-cIv" secondAttribute="bottom" constant="300" id="A1o-Ip-KYo"/>
+                            <constraint firstItem="RTB-yo-cIv" firstAttribute="leading" secondItem="77a-Id-eBf" secondAttribute="leading" constant="150" id="HNT-KW-gcs"/>
+                            <constraint firstItem="77a-Id-eBf" firstAttribute="bottom" secondItem="GMV-7i-dIw" secondAttribute="bottom" constant="300" id="TzO-PR-a7q"/>
+                            <constraint firstItem="GMV-7i-dIw" firstAttribute="top" secondItem="RTB-yo-cIv" secondAttribute="bottom" constant="100" id="jm9-Ke-kDh"/>
+                            <constraint firstItem="77a-Id-eBf" firstAttribute="trailing" secondItem="GMV-7i-dIw" secondAttribute="trailing" constant="150" id="kR4-xg-FUs"/>
+                            <constraint firstItem="RTB-yo-cIv" firstAttribute="top" secondItem="L4R-il-LND" secondAttribute="bottom" constant="8" id="mxo-It-WPM"/>
+                            <constraint firstItem="77a-Id-eBf" firstAttribute="trailing" secondItem="RTB-yo-cIv" secondAttribute="trailing" constant="150" id="nJn-cJ-Oe9"/>
+                            <constraint firstItem="GMV-7i-dIw" firstAttribute="leading" secondItem="77a-Id-eBf" secondAttribute="leading" constant="150" id="qWr-AJ-xe7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="59p-Ye-8kL"/>
-                    <connections>
-                        <outlet property="legislatorButton" destination="bT7-O5-vSg" id="cgj-QY-KB5"/>
-                        <outlet property="resourcesButton" destination="WHL-hf-5Cq" id="HRR-LN-PBC"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="OcS-mo-e1Q"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Od7-EP-7fd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysg-9V-y1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="327.48091603053433" y="107.74647887323944"/>
+            <point key="canvasLocation" x="2183.969465648855" y="107.74647887323944"/>
         </scene>
     </scenes>
     <resources>
@@ -109,10 +203,10 @@
             <color red="0.90196073060000004" green="0.90196073060000004" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TekfimNavy">
-            <color red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.1803921568627451" green="0.20000000000000001" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TekfimRed">
-            <color red="0.70588237050000002" green="0.37647059560000001" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.70588235294117652" green="0.37647058823529411" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
