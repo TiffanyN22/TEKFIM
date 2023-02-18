@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifT-KH-iLu">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,26 +24,95 @@
             </objects>
             <point key="canvasLocation" x="-643" y="109"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="80O-NY-pCR">
             <objects>
-                <viewController id="zB7-xz-Mu0" sceneMemberID="viewController">
+                <viewController id="zB7-xz-Mu0" customClass="HomeViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GIH-DU-DnR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TEKFIM Logo" translatesAutoresizingMaskIntoConstraints="NO" id="nqq-Y2-ZYs">
+                                <rect key="frame" x="107" y="158" width="179" height="174"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="EMe-gP-0ew"/>
+                                    <constraint firstAttribute="height" constant="174" id="jWS-kd-rB1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Politician Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-9d-oQb">
+                                <rect key="frame" x="98.666666666666686" y="387" width="196" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" name="TekfimNavy"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="presented by TEKFIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndL-0Q-8zd">
+                                <rect key="frame" x="75" y="447" width="242" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" name="TekfimNavy"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT7-O5-vSg">
+                                <rect key="frame" x="96.666666666666686" y="524" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="67U-qt-5KO"/>
+                                    <constraint firstAttribute="width" constant="200" id="6hX-kT-VOG"/>
+                                </constraints>
+                                <color key="tintColor" name="TekfimNavy"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Learn about your legislators" cornerStyle="medium" titleAlignment="center">
+                                    <color key="baseForegroundColor" name="TekfimGray"/>
+                                    <color key="baseBackgroundColor" name="TekfimNavy"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHL-hf-5Cq">
+                                <rect key="frame" x="97" y="612" width="200" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fTn-MP-gua"/>
+                                </constraints>
+                                <color key="tintColor" name="TekfimNavy"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Find Voting Resources Where You Live" cornerStyle="medium" titleAlignment="center">
+                                    <color key="baseForegroundColor" name="TekfimGray"/>
+                                    <color key="baseBackgroundColor" name="TekfimNavy"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="B0b-UK-zFv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="TekfimRed"/>
+                        <constraints>
+                            <constraint firstItem="WHL-hf-5Cq" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="0CL-Mt-PKv"/>
+                            <constraint firstItem="nqq-Y2-ZYs" firstAttribute="top" secondItem="B0b-UK-zFv" secondAttribute="top" constant="55" id="1Nb-4a-XmH"/>
+                            <constraint firstItem="VMX-9d-oQb" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="E8J-h9-b0a"/>
+                            <constraint firstItem="VMX-9d-oQb" firstAttribute="top" secondItem="nqq-Y2-ZYs" secondAttribute="bottom" constant="55" id="GDJ-KF-azQ"/>
+                            <constraint firstItem="WHL-hf-5Cq" firstAttribute="top" secondItem="bT7-O5-vSg" secondAttribute="bottom" constant="24" id="QmD-GO-MQZ"/>
+                            <constraint firstItem="nqq-Y2-ZYs" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="a9v-hp-OcT"/>
+                            <constraint firstItem="ndL-0Q-8zd" firstAttribute="top" secondItem="VMX-9d-oQb" secondAttribute="bottom" constant="18" id="ayr-Vm-5SM"/>
+                            <constraint firstItem="ndL-0Q-8zd" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="o2k-ow-jaT"/>
+                            <constraint firstItem="bT7-O5-vSg" firstAttribute="top" secondItem="ndL-0Q-8zd" secondAttribute="bottom" constant="53" id="pYW-Qy-j8p"/>
+                            <constraint firstItem="bT7-O5-vSg" firstAttribute="centerX" secondItem="B0b-UK-zFv" secondAttribute="centerX" id="u8Z-mY-qGG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="59p-Ye-8kL"/>
+                    <connections>
+                        <outlet property="legislatorButton" destination="bT7-O5-vSg" id="cgj-QY-KB5"/>
+                        <outlet property="resourcesButton" destination="WHL-hf-5Cq" id="HRR-LN-PBC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Od7-EP-7fd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="103"/>
+            <point key="canvasLocation" x="327.48091603053433" y="107.74647887323944"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="TEKFIM Logo" width="780" height="787"/>
+        <namedColor name="TekfimGray">
+            <color red="0.90196073060000004" green="0.90196073060000004" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TekfimNavy">
+            <color red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TekfimRed">
+            <color red="0.70588237050000002" green="0.37647059560000001" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
