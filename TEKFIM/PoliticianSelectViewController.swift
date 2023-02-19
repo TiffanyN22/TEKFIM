@@ -12,7 +12,7 @@ class PoliticianSelectViewController: UIViewController {
     
     var state: String = "Alaska"
     var congressionMembers: [Member] = []
-    var senators = ["senator1" ,"senator2"]
+    var senators: [Member] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +101,7 @@ class PoliticianSelectViewController: UIViewController {
         } else{
             self.senators = []
             for i in 0...stateSenators.count-1{
-                self.senators.append(stateSenators[i].member.name)
+                self.senators.append(stateSenators[i])
             }
             
             //update senators
@@ -145,10 +145,20 @@ class PoliticianSelectViewController: UIViewController {
 extension PoliticianSelectViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true) //deselect or unhghlight app, indexPath is position
+//        print(indexPath)
       
-        //TODO: navigation
+        //navigate to polician select page
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileSummary") as! ProfileSummaryViewController
+        
+//        print(PoliticianSelectViewController.senatorsTable[indexPath[1]].member.bioguideId)
+        vc.bioguideId = self.senators[indexPath[1]].member.bioguideId
+        navigationController?.pushViewController(vc, animated: true)
+//        vc.state = StateViewController.states[indexPath[1]]
+
     }
 }
+
+
 
 extension PoliticianSelectViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -157,7 +167,7 @@ extension PoliticianSelectViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SenatorCell", for:indexPath)
-        cell.textLabel?.text = self.senators[indexPath.row]
+        cell.textLabel?.text = self.senators[indexPath.row].member.name
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
         

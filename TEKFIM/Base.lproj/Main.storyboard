@@ -237,7 +237,7 @@
         <!--Profile Summary View Controller-->
         <scene sceneID="DpB-1d-ShP">
             <objects>
-                <viewController id="oOj-nm-W43" customClass="ProfileSummaryViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileSummary" id="oOj-nm-W43" customClass="ProfileSummaryViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HlR-fF-b1F">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
