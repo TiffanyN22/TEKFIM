@@ -20,7 +20,7 @@ class PoliticianSelectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(state)
+//        print(state)
         //get congressional members from api
         let apiKey = "cgBFpkuWG24jDavEv8jI0oWg54XgDenXJHPQUYGi"
         let congresssionalMembersUrl = "https://api.congress.gov/v3/member?api_key=\(apiKey)&format=json&limit=250"
@@ -29,17 +29,9 @@ class PoliticianSelectViewController: UIViewController {
     
 
         if (congressionalMembers.count == 0){
-           Task {
-               do {
-                   await getFilteredCongressionalData(from: congresssionalMembersUrl, from: congresssionalMembersUrl2, from: congresssionalMembersUrl3)
-               }
-           }
+           getFilteredCongressionalData(from: congresssionalMembersUrl, from: congresssionalMembersUrl2, from: congresssionalMembersUrl3)
        } else{
-           Task {
-               do {
-                   await filterCongressionalData()
-               }
-           }
+           filterCongressionalData()
        }
         //set up senator table
         senatorsTable.delegate = self
@@ -53,20 +45,16 @@ class PoliticianSelectViewController: UIViewController {
         self.congressionalMembers.append(contentsOf: newMembers)
     }
     
-    private func getFilteredCongressionalData(from url1: String, from url2: String, from url3: String) async{
+    private func getFilteredCongressionalData(from url1: String, from url2: String, from url3: String) {
         //filter
-        print("getting congressional data")
-        await getCongressionalData(from: url1)
-        print("done with await url 1")
-        await getCongressionalData(from: url2)
-        print("done with await url 2")
-        await getCongressionalData(from: url3)
-        print("done with await url 3")
+        getCongressionalData(from: url1)
+        getCongressionalData(from: url2)
+        getCongressionalData(from: url3)
 
-        await filterCongressionalData()
+        filterCongressionalData()
     }
     
-    private func getCongressionalData(from url: String) async{
+    private func getCongressionalData(from url: String) {
         let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
             guard let data = data, error == nil else{
                 print("something went wrong")
@@ -88,8 +76,8 @@ class PoliticianSelectViewController: UIViewController {
 
             Task {
                 do {
-                    await self.appendToCongressionalMembers(newMembers: json.members)
-                    await self.filterCongressionalData()
+                    self.appendToCongressionalMembers(newMembers: json.members)
+                    self.filterCongressionalData()
                 }
             }
         })
@@ -97,10 +85,8 @@ class PoliticianSelectViewController: UIViewController {
         
     }
     
-    private func filterCongressionalData() async{
+    private func filterCongressionalData() {
         //filter senators
-        print("congressinoalMember count:")
-        print(self.congressionalMembers.count)
         let stateSenators = self.congressionalMembers.filter { currentMember in
             return currentMember.member.state == self.state && currentMember.member.served.Senate != nil && currentMember.member.served.Senate?[0].end == nil
         }
@@ -110,14 +96,9 @@ class PoliticianSelectViewController: UIViewController {
             self.senators = []
             for i in 0...stateSenators.count-1{
                 self.senators.append(stateSenators[i])
-                print(stateSenators[i].member.name)
             }
             
-//            //update table
-            print("senators")
-            print(self.senators.count)
-            print(self.senators[0].member.name)
-            print(self.senators[1].member.name)
+            //update table
             self.updateSenators()
         }
         
@@ -126,12 +107,11 @@ class PoliticianSelectViewController: UIViewController {
             return currentMember.member.state == self.state && currentMember.member.served.House != nil && currentMember.member.served.House?[0].end == nil
         }
         if(stateRepresentatives.count == 0){
-            print("No senators found")
+            print("No representatives found")
         } else{
             self.representatives = []
             for i in 0...stateRepresentatives.count-1{
                 self.representatives.append(stateRepresentatives[i])
-                print(stateRepresentatives[i].member.name)
             }
             
             //update table
