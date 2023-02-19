@@ -11,8 +11,18 @@ import UIKit
 var myStr1 = "1263 Pacific Ave Kansas City KS"
 var addressArray = myStr1.components(separatedBy: " ")
 var runningSet = ["Albemarle", "Brandywine", "Chesapeake"]
+public var rowsInSec = 0
+
 
 class ElectionInfoUITableTableViewController: UITableViewController {
+    
+    @MainActor class UITableView : UIScrollView
+    
+    struct run{
+        var runFor = ""
+        var runningPeople = [String]()
+    }
+    var displays = [run]()
 
     var apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
     
@@ -64,10 +74,15 @@ class ElectionInfoUITableTableViewController: UITableViewController {
             let k = json.contests.count-1
             for i in 0...k{
                 print(json.contests[i].type)
+                self.displays[i].runFor = json.contests[i].type
+                
                 if(json.contests[i].candidates != nil){
                     let m = json.contests[i].candidates!.count - 1
                         for j in 0...m {
                             print(json.contests[i].candidates![j].name)
+                            runningSet.append(json.contests[i].candidates![j].name)
+                            self.displays[i].runningPeople[j].append(json.contests[i].candidates![j].name)
+                            rowsInSec+=1
                         }
                 }
 //
@@ -88,7 +103,6 @@ class ElectionInfoUITableTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -171,4 +185,27 @@ class ElectionInfoUITableTableViewController: UITableViewController {
         let name: String
         let party: String
     }
+    
+    
+}
+
+func tableView(
+    _ tableView: UITableView,
+    numberOfRowsInSection section: Int // replace int with rowsInSec?
+) -> Int{
+    
+}
+
+func tableView(
+    _ tableView: UITableView,
+    cellForRowAt indexPath: IndexPath
+) -> UITableViewCell{
+    
+}
+
+func tableView(
+    _ tableView: UITableView,
+    titleForHeaderInSection section: Int
+) -> String?{
+    
 }
