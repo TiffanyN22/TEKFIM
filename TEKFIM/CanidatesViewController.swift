@@ -9,18 +9,20 @@ import UIKit
 import AVFoundation
 
 class CanidatesViewController: UIViewController {
-
+    var apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
+    var addressNum = 1263
+    var address1st = "Pacific"
+    var address2nd = "Ave"
+    var city1st = "Kansas"
+    var city2nd = "City"
+    var state = "KS"
+    var electionID = 2000
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
-        let addressNum = 1263
-        let address1st = "Pacific"
-        let address2nd = "Ave"
-        let city1st = "Kansas"
-        let city2nd = "City"
-        let state = "KS"
-        let electionID = 2000
-        let url =  "https://www.googleapis.com/civicinfo/v2/voterinfo?key=\(apiKey)&address=\(addressNum)%20\(address1st)%20\(address2nd).%20\(city1st)%20\(city2nd)%20\(state)&electionId=\(electionID)" // possibly append &format=json
+        
+        var url = "https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM&address=1263%20Pacific%20Ave.%20Kansas%20City%20KS&electionId=2000"
+        
         getData(from: url)
 
         // Do any additional setup after loading the view.
@@ -33,9 +35,9 @@ class CanidatesViewController: UIViewController {
             }
             
             //convert json data into obejct
-            var result: Response?
+            var result: MyResult?
             do{
-                result = try JSONDecoder().decode(Response.self, from: data)
+                result = try JSONDecoder().decode(MyResult.self, from: data)
             }
             catch{
                 print("failed to convert data into json")
@@ -46,38 +48,36 @@ class CanidatesViewController: UIViewController {
             }
             
             print("call works!")
+            print(json.election.name)
             
-            let k = json.results.contests.count-1
-            for i in 0...k{
-                print(json.results.contests[i].type)
-                let m = json.results.contests[i].candidates.count - 1
-                for j in 0...m {
-                    print(json.results.contests[i].candidates[j].name)
-                }
-            }
+//            let k = json.contests.count-1
+//            for i in 0...k{
+//                print(json.contests[i].type)
+//                let m = json.contests[i].candidates.count - 1
+//                for j in 0...m {
+//                    print(json.contests[i].candidates[j].name)
+//                }
+//            }
         })
 
         task.resume()
 
     }
     
-    struct Response: Codable{
-        let results: MyResult
-        let status: String
-    }
     
     struct MyResult: Codable{
         let election: Election
-        let normalizedInput: NormalizedInput
-        let pollingLocations: [PollingLocations]
-        let contests: [Contests]
-        let state: [State]
     }
-    
-    struct Sources: Codable{
-        let name: String
-        let official: Bool
-    }
+//        let normalizedInput: NormalizedInput
+//        let pollingLocations: [PollingLocations]
+//        let contests: [Contests]
+//        let state: [State]
+//    }
+//
+//    struct Sources: Codable{
+//        let name: String
+//        let official: Bool
+//    }
     
     struct Election: Codable{
         let id: String
@@ -85,7 +85,7 @@ class CanidatesViewController: UIViewController {
         let electionDay: String
         let ocdDivisionId: String
     }
-    
+    /*
     struct NormalizedInput: Codable{
         let line1: String
         let city: String
@@ -175,6 +175,7 @@ class CanidatesViewController: UIViewController {
         let electionAdministrationBody: ElectionAdministrationBody
         let sources: [Sources]
     }
+     */
     
 
 }
