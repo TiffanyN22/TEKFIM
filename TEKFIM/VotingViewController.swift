@@ -6,35 +6,45 @@
 //
 import GoogleMaps
 import UIKit
+import GooglePlaces
 
 class VotingViewController: UIViewController {
     
-    @IBOutlet weak var Map: UIView!
+    let electionId = "2000"
+    let apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
+    let address = "1263 Pacific Ave. Kansas City KS" 
+
+    @IBOutlet weak var Map: GMSMapView!
+    @IBOutlet weak var placeTextField: UITextField!
+    
+    var lat: Double = -33
+    var long: Double = 151
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-        self.view.addSubview(mapView)
-
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        let camera =        GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 6.0)
+        Map.camera = camera
     }
+    
+    @IBAction func earlybutton(_ sender: Any) {
+    }
+    
+    @IBAction func dropoffbutton(_ sender: Any) {
+    }- (instancetype)initWithFrame:(NSRect)frame
+    {
+        self = [super initWithFrame:frame];
+        if (self) {
+            <#statements#>
+        }
+        return self;
+    }
+    
+    @IBAction func placeTextFieldTouchDown(_ sender: UITextField) {}
+    'https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=51%20Alice%20Avenue&includeOffices=true&levels=subLocality1&roles=headOfState&key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM' \
+    
+https://www.googleapis.com/civicinfo/v2/elections?key=<AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM>
+
+    
 }
 
-/*struct URL_INFO:{
-    let center: String
-    let size : Int
-    let key : AIzaSyBBCI4je_3F109yrQOFF8T55soxkejKBmA
-    let signature :
-}
-let url = "https://maps.googleapis.com/maps/api/staticmap?"
-*/
+

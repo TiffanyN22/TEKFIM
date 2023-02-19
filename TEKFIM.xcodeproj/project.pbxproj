@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3329F129A1AD0100CC4357 /* CanidatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */; };
 		4EAE6AE929A160DB005102D0 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAE6AE829A160DB005102D0 /* VotingViewController.swift */; };
 		8ED4AA605011EBD031E27011 /* Pods_TEKFIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */; };
 		C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanidatesViewController.swift; sourceTree = "<group>"; };
 		4EAE6AE829A160DB005102D0 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
 		6DE3B67685F97D094FD35693 /* Pods-TEKFIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKFIM.debug.xcconfig"; path = "Target Support Files/Pods-TEKFIM/Pods-TEKFIM.debug.xcconfig"; sourceTree = "<group>"; };
 		8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEKFIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +60,6 @@
 				6DE3B67685F97D094FD35693 /* Pods-TEKFIM.debug.xcconfig */,
 				EECA7CEB44185260D9CB5130 /* Pods-TEKFIM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +88,7 @@
 				C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */,
 				C6B77A5329A1543400E6BC0C /* ViewController.swift */,
 				C6B77A5529A1543400E6BC0C /* Main.storyboard */,
+				4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */,
 				C6B77A5829A1543500E6BC0C /* Assets.xcassets */,
 				C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */,
 				C6B77A5D29A1543500E6BC0C /* Info.plist */,
@@ -214,6 +216,7 @@
 				C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */,
 				C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */,
 				4EAE6AE929A160DB005102D0 /* VotingViewController.swift in Sources */,
+				4E3329F129A1AD0100CC4357 /* CanidatesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
