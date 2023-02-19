@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
 		983B7C7D29A195E700878465 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B7C7C29A195E700878465 /* LoginController.swift */; };
+=======
+		3318FA2D281B075E655FB781 /* Pods_TEKFIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F67570F8B5BB819771BD937 /* Pods_TEKFIM.framework */; };
+		38DF58EE29A17F32001E7A0A /* ProfileSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF58ED29A17F32001E7A0A /* ProfileSummaryViewController.swift */; };
+		38DF58F029A18B97001E7A0A /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF58EF29A18B97001E7A0A /* BillViewController.swift */; };
+		9811F1E429A22103007183F5 /* GoogleService-Info (7).plist in Resources */ = {isa = PBXBuildFile; fileRef = 9811F1E329A22103007183F5 /* GoogleService-Info (7).plist */; };
+		9816D48E29A1FCD8009341D4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9816D48D29A1FCD8009341D4 /* FirebaseAuth */; };
+		9816D49029A1FCD8009341D4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9816D48F29A1FCD8009341D4 /* FirebaseFirestore */; };
+		9816D49429A20069009341D4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9816D49329A20069009341D4 /* LoginController.swift */; };
+		9816D49629A201F4009341D4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9816D49529A201F4009341D4 /* SignUpViewController.swift */; };
+>>>>>>> Stashed changes
 		C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */; };
 		C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */; };
 		C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5329A1543400E6BC0C /* ViewController.swift */; };
@@ -20,7 +31,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< Updated upstream
 		983B7C7C29A195E700878465 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+=======
+		16E23122D8DADAB2F592BB4E /* Pods-TEKFIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKFIM.release.xcconfig"; path = "Target Support Files/Pods-TEKFIM/Pods-TEKFIM.release.xcconfig"; sourceTree = "<group>"; };
+		38DF58ED29A17F32001E7A0A /* ProfileSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummaryViewController.swift; sourceTree = "<group>"; };
+		38DF58EF29A18B97001E7A0A /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		9811F1E329A22103007183F5 /* GoogleService-Info (7).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (7).plist"; sourceTree = "<group>"; };
+		9816D49329A20069009341D4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		9816D49529A201F4009341D4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9F67570F8B5BB819771BD937 /* Pods_TEKFIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEKFIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> Stashed changes
 		C6B77A4C29A1543400E6BC0C /* TEKFIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEKFIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +53,11 @@
 		C6B77A6329A15B3100E6BC0C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C6B77A6529A15EC300E6BC0C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		C6B77A6729A175B800E6BC0C /* PoliticianSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianSelectViewController.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+=======
+		C6B77A6F29A1E8E000E6BC0C /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
+		CBC82F29805A624CFA9E9FCD /* Pods-TEKFIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKFIM.debug.xcconfig"; path = "Target Support Files/Pods-TEKFIM/Pods-TEKFIM.debug.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +65,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9816D48E29A1FCD8009341D4 /* FirebaseAuth in Frameworks */,
+				9816D49029A1FCD8009341D4 /* FirebaseFirestore in Frameworks */,
+				3318FA2D281B075E655FB781 /* Pods_TEKFIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C891A188680AA7DEEA03889 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F67570F8B5BB819771BD937 /* Pods_TEKFIM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACA749884F95B0DAE888C8C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBC82F29805A624CFA9E9FCD /* Pods-TEKFIM.debug.xcconfig */,
+				16E23122D8DADAB2F592BB4E /* Pods-TEKFIM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C6B77A4329A1543400E6BC0C = {
 			isa = PBXGroup;
 			children = (
 				C6B77A4E29A1543400E6BC0C /* TEKFIM */,
 				C6B77A4D29A1543400E6BC0C /* Products */,
+				ACA749884F95B0DAE888C8C9 /* Pods */,
+				5C891A188680AA7DEEA03889 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +112,7 @@
 		C6B77A4E29A1543400E6BC0C /* TEKFIM */ = {
 			isa = PBXGroup;
 			children = (
+				9811F1E329A22103007183F5 /* GoogleService-Info (7).plist */,
 				C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */,
 				C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */,
 				C6B77A5329A1543400E6BC0C /* ViewController.swift */,
@@ -74,6 +123,12 @@
 				C6B77A6329A15B3100E6BC0C /* HomeViewController.swift */,
 				C6B77A6529A15EC300E6BC0C /* StateViewController.swift */,
 				C6B77A6729A175B800E6BC0C /* PoliticianSelectViewController.swift */,
+<<<<<<< Updated upstream
+=======
+				C6B77A6F29A1E8E000E6BC0C /* StateTableViewCell.swift */,
+				9816D49329A20069009341D4 /* LoginController.swift */,
+				9816D49529A201F4009341D4 /* SignUpViewController.swift */,
+>>>>>>> Stashed changes
 			);
 			path = TEKFIM;
 			sourceTree = "<group>";
@@ -85,15 +140,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6B77A6029A1543500E6BC0C /* Build configuration list for PBXNativeTarget "TEKFIM" */;
 			buildPhases = (
+				4C04EA6EB7038A7417AD2B01 /* [CP] Check Pods Manifest.lock */,
 				C6B77A4829A1543400E6BC0C /* Sources */,
 				C6B77A4929A1543400E6BC0C /* Frameworks */,
 				C6B77A4A29A1543400E6BC0C /* Resources */,
+				5053A489F9FF787BAA2E1040 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TEKFIM;
+			packageProductDependencies = (
+				9816D48D29A1FCD8009341D4 /* FirebaseAuth */,
+				9816D48F29A1FCD8009341D4 /* FirebaseFirestore */,
+			);
 			productName = TEKFIM;
 			productReference = C6B77A4C29A1543400E6BC0C /* TEKFIM.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +183,9 @@
 				Base,
 			);
 			mainGroup = C6B77A4329A1543400E6BC0C;
+			packageReferences = (
+				9816D48C29A1FCD8009341D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C6B77A4D29A1543400E6BC0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B77A5C29A1543500E6BC0C /* LaunchScreen.storyboard in Resources */,
+				9811F1E429A22103007183F5 /* GoogleService-Info (7).plist in Resources */,
 				C6B77A5929A1543500E6BC0C /* Assets.xcassets in Resources */,
 				C6B77A5729A1543400E6BC0C /* Main.storyboard in Resources */,
 			);
@@ -144,16 +209,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C04EA6EB7038A7417AD2B01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TEKFIM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5053A489F9FF787BAA2E1040 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TEKFIM/Pods-TEKFIM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TEKFIM/Pods-TEKFIM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TEKFIM/Pods-TEKFIM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C6B77A4829A1543400E6BC0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9816D49629A201F4009341D4 /* SignUpViewController.swift in Sources */,
 				C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */,
 				C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */,
 				C6B77A6829A175B800E6BC0C /* PoliticianSelectViewController.swift in Sources */,
 				C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */,
 				C6B77A6429A15B3100E6BC0C /* HomeViewController.swift in Sources */,
+				9816D49429A20069009341D4 /* LoginController.swift in Sources */,
 				C6B77A6629A15EC300E6BC0C /* StateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +405,7 @@
 		};
 		C6B77A6129A1543500E6BC0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC82F29805A624CFA9E9FCD /* Pods-TEKFIM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,6 +434,7 @@
 		};
 		C6B77A6229A1543500E6BC0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16E23122D8DADAB2F592BB4E /* Pods-TEKFIM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -372,6 +483,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9816D48C29A1FCD8009341D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9816D48D29A1FCD8009341D4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9816D48C29A1FCD8009341D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9816D48F29A1FCD8009341D4 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9816D48C29A1FCD8009341D4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6B77A4429A1543400E6BC0C /* Project object */;
 }
