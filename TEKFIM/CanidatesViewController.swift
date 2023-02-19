@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 
+
 class Contest {
     var name: String
     var participants: [String]
@@ -19,6 +20,8 @@ class Contest {
 }
 
 class CanidatesViewController: UIViewController, UITableViewDataSource{
+    
+    var contests: [Contest] = []
     var apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
     var addressNum = 1263
     var address1st = "Pacific"
@@ -37,7 +40,11 @@ class CanidatesViewController: UIViewController, UITableViewDataSource{
         var url = "https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM&address=1263%20Pacific%20Ave.%20Kansas%20City%20KS&electionId=2000"
         
         getData(from: url)
-        showData()
+        let contest1 = Contest(name: "Contest 1", participants: ["Alice", "Bob", "Charlie"])
+        let contest2 = Contest(name: "Contest 2", participants: ["Dave", "Eve"])
+        contests = [contest1, contest2]
+        
+        tableView.dataSource = self
 
 //        candidateTable.delegate = self
 //        candidateTable.dataSource = self
@@ -74,8 +81,10 @@ class CanidatesViewController: UIViewController, UITableViewDataSource{
                     let m = json.contests[i].candidates!.count - 1
                         for j in 0...m {
                             print(json.contests[i].candidates![j].name)
+                            let contest = Contest(name: json.contests[i].type, participants: ["Alice", "Bob", "Charlie"])
                         }
                 }
+                
 //
             }
         })
