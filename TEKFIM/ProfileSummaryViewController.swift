@@ -38,13 +38,18 @@ class ProfileSummaryViewController: UIViewController {
         
         let memberUrl = "https://api.congress.gov/v3/member/\(bioguideId)?api_key=\(apiKey)&format=json"
         getMemberData(from: memberUrl)
-        setName()
+
         
         let sponsoredLegislationUrl = "https://api.congress.gov/v3/member/\(bioguideId)/sponsored-legislation?api_key=\(apiKey)&format=json"
         getSponsoredLegislationData(from: sponsoredLegislationUrl)
         
         sponsoredLegislationTable.delegate = self
         sponsoredLegislationTable.dataSource = self
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.updateLegislationTable()
+            self.setName()
+        }
+        
     }
 //      change name for senator
     private func setName(){
@@ -93,7 +98,7 @@ class ProfileSummaryViewController: UIViewController {
 
 //            print(json.member.directOrderName)
             self.member = json.member
-            self.setName()
+//            self.setName()
         })
 
         task.resume()
@@ -124,13 +129,13 @@ class ProfileSummaryViewController: UIViewController {
             }
             
             if(json.sponsoredLegislation != nil){
-                self.sponsoredLegislationList = json.sponsoredLegislation.filter{ currentLegislation in
+                self.sponsoredLegislationList = json.sponsoredLegislation!.filter{ currentLegislation in
                     return currentLegislation.number != nil && currentLegislation.type != nil &&
                     currentLegislation.title != nil
                 }
 //                print(self.sponsoredLegislationList[0].title)
             }
-            self.sponsoredLegislationTable.reloadData()
+//            self.updateLegislationTable() ??
 //            if(self.sponsoredLegislationList.count != 0){
 //                for i in 0...self.sponsoredLegislationList.count-1{
 //                    print(self.sponsoredLegislationList[i].title)
@@ -139,51 +144,14 @@ class ProfileSummaryViewController: UIViewController {
 //                print("No legislation")
 //            }
         })
-
         task.resume()
-        
-        
-        
+//        self.updateLegislationTable()
     }
     
-    //senator state info
+    private func updateLegislationTable(){
+        sponsoredLegislationTable.reloadData()
+    }
 
-//    private func getTermInfoData(from url: String){
-//        let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
-//            guard let data = data, error == nil else{
-//                print("something went wrong")
-//                return
-//            }
-//
-//            //convert json data into obejct
-//            var result: termInfo?
-//
-//            do{
-//                result = try JSONDecoder().decode(termInfo.self, from: data)
-//
-//            }
-//            catch{
-//                print("failed to convert")
-//            }
-//
-//            guard let json = result else{
-//                return
-//            }
-//
-////            print(json.member.directOrderName)
-//            self.state = json
-//            self.setState()
-////        })
-//
-//        task.resume()
-//        print("task resumed")
-////        self.setName()
-//        }
-
-
-
-    
-    
     //Member Data from Json
     struct CongressionalMember: Codable{
         let member: MemberData
@@ -207,7 +175,7 @@ class ProfileSummaryViewController: UIViewController {
     
     //Sponsored Legislation Data from Json
     struct SponsoredLegislationList: Codable{
-        var sponsoredLegislation = [LegislationInfo]()
+        var sponsoredLegislation: [LegislationInfo]?
     }
     struct LegislationInfo: Codable{
         let congress: Int;
@@ -221,10 +189,13 @@ class ProfileSummaryViewController: UIViewController {
 extension ProfileSummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true) //deselect or unhghlight app, indexPath is position
-        //TODO: navigation
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileSummary") as! ProfileSummaryViewController
-//        vc.bioguideId = self.senators[indexPath[1]].member.bioguideId
-//        navigationController?.pushViewController(vc, animated: true)
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "billViewController") as! BillViewController
+        vc.billType = self.sponsoredLegislationList[indexPath[1]].type!
+        vc.billNumber = self.sponsoredLegislationList[indexPath[1]].number!
+        vc.billTitle = self.sponsoredLegislationList[indexPath[1]].title!
+
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 }

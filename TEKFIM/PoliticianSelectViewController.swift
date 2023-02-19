@@ -14,9 +14,7 @@ class PoliticianSelectViewController: UIViewController {
     var state: String = "Alaska"
     var congressionalMembers: [Member] = []
     var senators: [Member] = []
-    var senatorsTest = ["Sen1", "Sen2"]
     var representatives: [Member] = []
-    var representativesTest = ["Rep1", "Rep2", "Rep3", "Rep4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
