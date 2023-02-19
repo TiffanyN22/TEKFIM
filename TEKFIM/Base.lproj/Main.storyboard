@@ -74,6 +74,16 @@
                                 <rect key="frame" x="76" y="189" width="240" height="373"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="candidateTableCell" id="cDf-VM-Xjw">
+                                        <rect key="frame" x="0.0" y="50" width="240" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDf-VM-Xjw" id="hoR-b7-7Ko">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lo8-tN-O47"/>
@@ -82,6 +92,7 @@
                             <outlet property="NameLabel" destination="8jl-eG-tDi" id="wKQ-Rg-5DD"/>
                             <outlet property="Table" destination="8jl-eG-tDi" id="F8G-Qe-Iyn"/>
                             <outlet property="candidateTable" destination="8jl-eG-tDi" id="gQh-uZ-Scy"/>
+                            <outlet property="candidatesTable" destination="8jl-eG-tDi" id="0Dr-Ux-ddY"/>
                             <outlet property="gi" destination="8jl-eG-tDi" id="DKN-5b-VXL"/>
                             <outlet property="h" destination="8jl-eG-tDi" id="FBM-ZK-wef"/>
                             <outlet property="nameLabelYes" destination="8jl-eG-tDi" id="qsR-6l-wGv"/>
