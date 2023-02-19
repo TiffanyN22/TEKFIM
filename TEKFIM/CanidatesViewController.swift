@@ -50,14 +50,17 @@ class CanidatesViewController: UIViewController {
             print("call works!")
             print(json.election.name)
             
-//            let k = json.contests.count-1
-//            for i in 0...k{
-//                print(json.contests[i].type)
-//                let m = json.contests[i].candidates.count - 1
-//                for j in 0...m {
-//                    print(json.contests[i].candidates[j].name)
-//                }
-//            }
+            let k = json.contests.count-1
+            for i in 0...k{
+                print(json.contests[i].type)
+                if(json.contests[i].candidates != nil){
+                    let m = json.contests[i].candidates!.count - 1
+                        for j in 0...m {
+                            print(json.contests[i].candidates![j].name)
+                        }
+                }
+//
+            }
         })
 
         task.resume()
@@ -67,12 +70,11 @@ class CanidatesViewController: UIViewController {
     
     struct MyResult: Codable{
         let election: Election
+        //let normalizedInput: NormalizedInput
+        //let pollingLocations: [PollingLocations]
+        var contests = [Contests]()
+        //let state: [State]
     }
-//        let normalizedInput: NormalizedInput
-//        let pollingLocations: [PollingLocations]
-//        let contests: [Contests]
-//        let state: [State]
-//    }
 //
 //    struct Sources: Codable{
 //        let name: String
@@ -106,18 +108,18 @@ class CanidatesViewController: UIViewController {
         let state: String
         let zip: String
     }
-    
+    */
     
     struct Contests: Codable {
         let type: String
-        let office: String
-        let level: [Level]
-        let roles: [Roles]
-        let district: District
-        let sources: [Sources]
-        let candidates: [Candidates]
+        //let office: String
+        //let level: [Level]
+        //let roles: [Roles]
+        //let district: District
+        //let sources: [Sources]
+        let candidates: [Candidates]?
     }
-    
+    /*
     struct Level: Codable {
         let lvl: String
     }
@@ -132,14 +134,12 @@ class CanidatesViewController: UIViewController {
         let id: String
     }
 
-    
+    */
     struct Candidates: Codable {
         let name: String
         let party: String
-        let canddiateUrl: String
-        let channels: [Channels]
     }
-    
+    /*
     struct Channels: Codable {
         let type: String
         let id: String
