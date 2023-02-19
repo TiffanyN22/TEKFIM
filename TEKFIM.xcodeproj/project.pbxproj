@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38DF58EE29A17F32001E7A0A /* ProfileSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF58ED29A17F32001E7A0A /* ProfileSummaryViewController.swift */; };
+		38DF58F029A18B97001E7A0A /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF58EF29A18B97001E7A0A /* BillViewController.swift */; };
 		C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */; };
 		C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */; };
 		C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5329A1543400E6BC0C /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38DF58ED29A17F32001E7A0A /* ProfileSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummaryViewController.swift; sourceTree = "<group>"; };
+		38DF58EF29A18B97001E7A0A /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 		C6B77A4C29A1543400E6BC0C /* TEKFIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEKFIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +70,11 @@
 				C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */,
 				C6B77A5329A1543400E6BC0C /* ViewController.swift */,
 				C6B77A5529A1543400E6BC0C /* Main.storyboard */,
+				38DF58EF29A18B97001E7A0A /* BillViewController.swift */,
 				C6B77A5829A1543500E6BC0C /* Assets.xcassets */,
 				C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */,
 				C6B77A5D29A1543500E6BC0C /* Info.plist */,
+				38DF58ED29A17F32001E7A0A /* ProfileSummaryViewController.swift */,
 				C6B77A6329A15B3100E6BC0C /* HomeViewController.swift */,
 				C6B77A6529A15EC300E6BC0C /* StateViewController.swift */,
 				C6B77A6729A175B800E6BC0C /* PoliticianSelectViewController.swift */,
@@ -148,9 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */,
+				38DF58EE29A17F32001E7A0A /* ProfileSummaryViewController.swift in Sources */,
 				C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */,
 				C6B77A6829A175B800E6BC0C /* PoliticianSelectViewController.swift in Sources */,
 				C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */,
+				38DF58F029A18B97001E7A0A /* BillViewController.swift in Sources */,
 				C6B77A6429A15B3100E6BC0C /* HomeViewController.swift in Sources */,
 				C6B77A6629A15EC300E6BC0C /* StateViewController.swift in Sources */,
 			);
