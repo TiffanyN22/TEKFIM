@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4E3329F129A1AD0100CC4357 /* CanidatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */; };
 		4EAE6AE929A160DB005102D0 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAE6AE829A160DB005102D0 /* VotingViewController.swift */; };
-		4ECBD87A29A21F96006201F0 /* ElectionInfoUITableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECBD87929A21F96006201F0 /* ElectionInfoUITableTableViewController.swift */; };
 		8ED4AA605011EBD031E27011 /* Pods_TEKFIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */; };
 		C12BE0FE29A1A68A00F6E62A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C12BE0FD29A1A68A00F6E62A /* FirebaseAuth */; };
 		C12BE10029A1A68A00F6E62A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C12BE0FF29A1A68A00F6E62A /* FirebaseFirestore */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanidatesViewController.swift; sourceTree = "<group>"; };
 		4EAE6AE829A160DB005102D0 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
-		4ECBD87929A21F96006201F0 /* ElectionInfoUITableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionInfoUITableTableViewController.swift; sourceTree = "<group>"; };
 		6DE3B67685F97D094FD35693 /* Pods-TEKFIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKFIM.debug.xcconfig"; path = "Target Support Files/Pods-TEKFIM/Pods-TEKFIM.debug.xcconfig"; sourceTree = "<group>"; };
 		8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEKFIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12BE10129A1A6C700F6E62A /* GoogleService-Info-7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-7.plist"; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				C12BE10129A1A6C700F6E62A /* GoogleService-Info-7.plist */,
 				C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */,
 				C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */,
-				4ECBD87929A21F96006201F0 /* ElectionInfoUITableTableViewController.swift */,
 				C6B77A5329A1543400E6BC0C /* ViewController.swift */,
 				C6B77A5529A1543400E6BC0C /* Main.storyboard */,
 				4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */,
@@ -231,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */,
-				4ECBD87A29A21F96006201F0 /* ElectionInfoUITableTableViewController.swift in Sources */,
 				C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */,
 				C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */,
 				4EAE6AE929A160DB005102D0 /* VotingViewController.swift in Sources */,

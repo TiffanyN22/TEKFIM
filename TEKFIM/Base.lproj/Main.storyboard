@@ -55,31 +55,31 @@
             </objects>
             <point key="canvasLocation" x="263" y="108"/>
         </scene>
-        <!--Canidates View Controller-->
+        <!--Candidates View Controller-->
         <scene sceneID="5wR-0z-vJA">
             <objects>
-                <viewController id="kn8-SV-lQX" customClass="CanidatesViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Pzj-pB-MRw" customClass="CanidatesViewController">
+                <viewController id="kn8-SV-lQX" customClass="CandidatesViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pzj-pB-MRw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9y-ZY-94E">
-                                <rect key="frame" x="167" y="136" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Candidates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9y-ZY-94E">
+                                <rect key="frame" x="134" y="111" width="124" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8jl-eG-tDi">
-                                <rect key="frame" x="76" y="189" width="240" height="373"/>
+                                <rect key="frame" x="33" y="171" width="326" height="578"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="candidateTableCell" id="cDf-VM-Xjw">
-                                        <rect key="frame" x="0.0" y="50" width="240" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="326" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDf-VM-Xjw" id="hoR-b7-7Ko">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -88,23 +88,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lo8-tN-O47"/>
                         <color key="backgroundColor" name="TekfimNavy"/>
-                        <connections>
-                            <outlet property="NameLabel" destination="8jl-eG-tDi" id="wKQ-Rg-5DD"/>
-                            <outlet property="Table" destination="8jl-eG-tDi" id="F8G-Qe-Iyn"/>
-                            <outlet property="candidateTable" destination="8jl-eG-tDi" id="gQh-uZ-Scy"/>
-                            <outlet property="candidatesTable" destination="8jl-eG-tDi" id="0Dr-Ux-ddY"/>
-                            <outlet property="gi" destination="8jl-eG-tDi" id="DKN-5b-VXL"/>
-                            <outlet property="h" destination="8jl-eG-tDi" id="FBM-ZK-wef"/>
-                            <outlet property="nameLabelYes" destination="8jl-eG-tDi" id="qsR-6l-wGv"/>
-                            <outlet property="table" destination="8jl-eG-tDi" id="c5K-oE-Yea"/>
-                            <outlet property="tableView" destination="8jl-eG-tDi" id="SYQ-m5-AfG"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Qdl-Iv-Q8U"/>
+                    <connections>
+                        <outlet property="candidatesTable" destination="8jl-eG-tDi" id="Fde-GM-i2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1A-1f-jJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039" y="796"/>
+            <point key="canvasLocation" x="2038.9312977099237" y="795.77464788732402"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="FDS-Cx-FTP">
@@ -207,7 +199,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Canidates For Local Election"/>
                                         <connections>
-                                            <segue destination="NC8-zz-IL3" kind="show" id="RNW-U0-lFg"/>
+                                            <segue destination="kn8-SV-lQX" kind="show" id="VuA-TL-NPN"/>
                                         </connections>
                                     </button>
                                 </subviews>

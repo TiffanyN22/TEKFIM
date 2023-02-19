@@ -13,9 +13,8 @@ class CandidatesViewController: UIViewController {
     let electionId = "2000"
     let apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
     let address = "1263 Pacific Ave. Kansas City KS"
-
+        
     @IBOutlet weak var candidatesTable: UITableView!
-    
     var electionDisplayInfo: [String] = []
     var isElectionDisplayContest: [Bool] = [] //true for contest, false for candidate
 
@@ -26,8 +25,15 @@ class CandidatesViewController: UIViewController {
 
         getData(from: url)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            print("FROM ELECTION DISPLAY :)")
+//             for i in 0...self.electionDisplayInfo.count-1{
+//                print(self.electionDisplayInfo[i])
+//            }
             self.candidatesTable.reloadData()
         }
+        
+        candidatesTable.delegate = self
+        candidatesTable.dataSource = self
     }
 
     private func getData(from url: String){
@@ -51,48 +57,50 @@ class CandidatesViewController: UIViewController {
             }
             
             print("call works!")
-            print(json.election.name)
+//            print(json.election.name)
             
             let k = json.contests.count-1
             for i in 0...k{
-                print(json.contests[i].type)
-                self.electionDisplayInfo.append(json.contests[i].type)
+                print(json.contests[i].office)
+                self.electionDisplayInfo.append(json.contests[i].office ?? "unknown office")
                 self.isElectionDisplayContest.append(true)
                 
                 if(json.contests[i].candidates != nil){
                     let m = json.contests[i].candidates!.count - 1
                     for j in 0...m {
                         print(json.contests[i].candidates![j].name)
-                        self.electionDisplayInfo.append(json.contests[i].candidates![j].name)
+                        self.electionDisplayInfo.append(json.contests[i].candidates![j].name ?? "unnamed")
                         self.isElectionDisplayContest.append(false)
                     }
                 }
             }
+            print("k is \(k)")
+            print("number of display info: \(self.electionDisplayInfo.count)")
         })
         task.resume()
     }
     
-    struct groupRunning: Codable{
-        let runFor: String
-        var name = [String]()
-    }
+//    struct groupRunning: Codable{
+//        let runFor: String
+//        var name = [String]()
+//    }
     struct MyResult: Codable{
-        let election: Election
+//        let election: Election
         var contests = [Contests]()
     }
-    struct Election: Codable{
-        let id: String
-        let name: String
-        let electionDay: String
-        let ocdDivisionId: String
-    }
+//    struct Election: Codable{
+//        let id: String
+//        let name: String
+//        let electionDay: String
+//        let ocdDivisionId: String
+//    }
     struct Contests: Codable {
-        let type: String
+        let office: String?
         let candidates: [Candidates]?
     }
     struct Candidates: Codable {
-        let name: String
-        let party: String
+        let name: String?
+        let party: String?
     }
 }
 
@@ -117,11 +125,13 @@ extension CandidatesViewController: UITableViewDataSource {
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
         cell.textLabel?.numberOfLines = 0
-        
+
         if(isElectionDisplayContest[indexPath.row]){
             cell.backgroundColor = UIColor(named: "TekfimRed")
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
         } else{
             cell.backgroundColor = UIColor(named: "TekfimGray")
+            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 14.0)
         }
         return cell
     }
