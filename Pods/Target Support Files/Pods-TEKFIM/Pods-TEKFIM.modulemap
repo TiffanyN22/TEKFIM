@@ -1,0 +1,6 @@
+framework module Pods_TEKFIM {
+  umbrella header "Pods-TEKFIM-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		38DF58EE29A17F32001E7A0A /* ProfileSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF58ED29A17F32001E7A0A /* ProfileSummaryViewController.swift */; };
 		38DF58F029A18B97001E7A0A /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF58EF29A18B97001E7A0A /* BillViewController.swift */; };
+		4E3329F129A1AD0100CC4357 /* CanidatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */; };
+		4EAE6AE929A160DB005102D0 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAE6AE829A160DB005102D0 /* VotingViewController.swift */; };
+		4EE301E529A28A12002F80BC /* InputTextUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE301E429A28A12002F80BC /* InputTextUIViewController.swift */; };
+		8ED4AA605011EBD031E27011 /* Pods_TEKFIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */; };
+		C12BE0FE29A1A68A00F6E62A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C12BE0FD29A1A68A00F6E62A /* FirebaseAuth */; };
+		C12BE10029A1A68A00F6E62A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C12BE0FF29A1A68A00F6E62A /* FirebaseFirestore */; };
+		C12BE10229A1A6C700F6E62A /* GoogleService-Info-7.plist in Resources */ = {isa = PBXBuildFile; fileRef = C12BE10129A1A6C700F6E62A /* GoogleService-Info-7.plist */; };
 		C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */; };
 		C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */; };
 		C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5329A1543400E6BC0C /* ViewController.swift */; };
-		C6B77A5729A1543400E6BC0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5529A1543400E6BC0C /* Main.storyboard */; };
+		C6B77A5729A1543400E6BC0C /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5529A1543400E6BC0C /* Main2.storyboard */; };
 		C6B77A5929A1543500E6BC0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5829A1543500E6BC0C /* Assets.xcassets */; };
 		C6B77A5C29A1543500E6BC0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */; };
 		C6B77A6429A15B3100E6BC0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A6329A15B3100E6BC0C /* HomeViewController.swift */; };
@@ -24,11 +31,17 @@
 /* Begin PBXFileReference section */
 		38DF58ED29A17F32001E7A0A /* ProfileSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummaryViewController.swift; sourceTree = "<group>"; };
 		38DF58EF29A18B97001E7A0A /* BillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanidatesViewController.swift; sourceTree = "<group>"; };
+		4EAE6AE829A160DB005102D0 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
+		4EE301E429A28A12002F80BC /* InputTextUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputTextUIViewController.swift; path = /Users/Kara/TEKFIM/TEKFIM/InputTextUIViewController.swift; sourceTree = "<absolute>"; };
+		6DE3B67685F97D094FD35693 /* Pods-TEKFIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKFIM.debug.xcconfig"; path = "Target Support Files/Pods-TEKFIM/Pods-TEKFIM.debug.xcconfig"; sourceTree = "<group>"; };
+		8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEKFIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12BE10129A1A6C700F6E62A /* GoogleService-Info-7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-7.plist"; sourceTree = "<group>"; };
 		C6B77A4C29A1543400E6BC0C /* TEKFIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEKFIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C6B77A5329A1543400E6BC0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6B77A5629A1543400E6BC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6B77A5629A1543400E6BC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 		C6B77A5829A1543500E6BC0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6B77A5B29A1543500E6BC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6B77A5D29A1543500E6BC0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +49,7 @@
 		C6B77A6529A15EC300E6BC0C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		C6B77A6729A175B800E6BC0C /* PoliticianSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticianSelectViewController.swift; sourceTree = "<group>"; };
 		C6B77A6F29A1E8E000E6BC0C /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
+		EECA7CEB44185260D9CB5130 /* Pods-TEKFIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKFIM.release.xcconfig"; path = "Target Support Files/Pods-TEKFIM/Pods-TEKFIM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +57,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED4AA605011EBD031E27011 /* Pods_TEKFIM.framework in Frameworks */,
+				C12BE0FE29A1A68A00F6E62A /* FirebaseAuth in Frameworks */,
+				C12BE10029A1A68A00F6E62A /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04B6A3476F93B48D13868522 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		790D8D42E21C8F5FC3533B58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DE3B67685F97D094FD35693 /* Pods-TEKFIM.debug.xcconfig */,
+				EECA7CEB44185260D9CB5130 /* Pods-TEKFIM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C6B77A4329A1543400E6BC0C = {
 			isa = PBXGroup;
 			children = (
 				C6B77A4E29A1543400E6BC0C /* TEKFIM */,
 				C6B77A4D29A1543400E6BC0C /* Products */,
+				790D8D42E21C8F5FC3533B58 /* Pods */,
+				04B6A3476F93B48D13868522 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +104,8 @@
 		C6B77A4E29A1543400E6BC0C /* TEKFIM */ = {
 			isa = PBXGroup;
 			children = (
+				C12BE10129A1A6C700F6E62A /* GoogleService-Info-7.plist */,
+				4EE301E429A28A12002F80BC /* InputTextUIViewController.swift */,
 				C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */,
 				C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */,
 				C6B77A5329A1543400E6BC0C /* ViewController.swift */,
@@ -81,6 +119,12 @@
 				C6B77A6529A15EC300E6BC0C /* StateViewController.swift */,
 				C6B77A6729A175B800E6BC0C /* PoliticianSelectViewController.swift */,
 				C6B77A6F29A1E8E000E6BC0C /* StateTableViewCell.swift */,
+				C6B77A5529A1543400E6BC0C /* Main2.storyboard */,
+				4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */,
+				C6B77A5829A1543500E6BC0C /* Assets2.xcassets */,
+				C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */,
+				C6B77A5D29A1543500E6BC0C /* Info.plist */,
+				4EAE6AE829A160DB005102D0 /* VotingViewController.swift */,
 			);
 			path = TEKFIM;
 			sourceTree = "<group>";
@@ -92,15 +136,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6B77A6029A1543500E6BC0C /* Build configuration list for PBXNativeTarget "TEKFIM" */;
 			buildPhases = (
+				54C90DD189696804F606B4FA /* [CP] Check Pods Manifest.lock */,
 				C6B77A4829A1543400E6BC0C /* Sources */,
 				C6B77A4929A1543400E6BC0C /* Frameworks */,
 				C6B77A4A29A1543400E6BC0C /* Resources */,
+				54B9E1B7A8D306713DEE9BC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TEKFIM;
+			packageProductDependencies = (
+				C12BE0FD29A1A68A00F6E62A /* FirebaseAuth */,
+				C12BE0FF29A1A68A00F6E62A /* FirebaseFirestore */,
+			);
 			productName = TEKFIM;
 			productReference = C6B77A4C29A1543400E6BC0C /* TEKFIM.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +179,9 @@
 				Base,
 			);
 			mainGroup = C6B77A4329A1543400E6BC0C;
+			packageReferences = (
+				C12BE0FC29A1A68A00F6E62A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C6B77A4D29A1543400E6BC0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,17 +198,61 @@
 			files = (
 				C6B77A5C29A1543500E6BC0C /* LaunchScreen.storyboard in Resources */,
 				C6B77A5929A1543500E6BC0C /* Assets.xcassets in Resources */,
-				C6B77A5729A1543400E6BC0C /* Main.storyboard in Resources */,
+				C6B77A5729A1543400E6BC0C /* Main2.storyboard in Resources */,
+				C12BE10229A1A6C700F6E62A /* GoogleService-Info-7.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54B9E1B7A8D306713DEE9BC8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TEKFIM/Pods-TEKFIM-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TEKFIM/Pods-TEKFIM-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TEKFIM/Pods-TEKFIM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54C90DD189696804F606B4FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TEKFIM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6B77A4829A1543400E6BC0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE301E529A28A12002F80BC /* InputTextUIViewController.swift in Sources */,
 				C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */,
 				38DF58EE29A17F32001E7A0A /* ProfileSummaryViewController.swift in Sources */,
 				C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */,
@@ -165,18 +262,20 @@
 				38DF58F029A18B97001E7A0A /* BillViewController.swift in Sources */,
 				C6B77A6429A15B3100E6BC0C /* HomeViewController.swift in Sources */,
 				C6B77A6629A15EC300E6BC0C /* StateViewController.swift in Sources */,
+				4EAE6AE929A160DB005102D0 /* VotingViewController.swift in Sources */,
+				4E3329F129A1AD0100CC4357 /* CanidatesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C6B77A5529A1543400E6BC0C /* Main.storyboard */ = {
+		C6B77A5529A1543400E6BC0C /* Main2.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C6B77A5629A1543400E6BC0C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main2.storyboard;
 			sourceTree = "<group>";
 		};
 		C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */ = {
@@ -306,12 +405,13 @@
 		};
 		C6B77A6129A1543500E6BC0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DE3B67685F97D094FD35693 /* Pods-TEKFIM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TUL2KBL2YN;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TEKFIM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,12 +434,13 @@
 		};
 		C6B77A6229A1543500E6BC0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EECA7CEB44185260D9CB5130 /* Pods-TEKFIM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TUL2KBL2YN;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TEKFIM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -382,6 +483,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C12BE0FC29A1A68A00F6E62A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C12BE0FD29A1A68A00F6E62A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12BE0FC29A1A68A00F6E62A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C12BE0FF29A1A68A00F6E62A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12BE0FC29A1A68A00F6E62A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6B77A4429A1543400E6BC0C /* Project object */;
 }
