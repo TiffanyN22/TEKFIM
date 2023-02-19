@@ -30,12 +30,6 @@ class StateViewController: UIViewController {
     }
     
     func updateStates(){
-        //iterate from 0 to count, incluseve, add add tas
-//        for x in 0..<StateViewController.states.count {
-//            if let task = UserDefaults().value(forKey: "task_\(x+1)") as? String{
-//                tasks.append(task)
-//            }
-//        }
         statesTable.reloadData()
     }
     
@@ -45,9 +39,11 @@ extension StateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.backgroundColor = UIColor(named: "TekfimNavy")
         tableView.deselectRow(at: indexPath, animated: true) //deselect or unhghlight app, indexPath is position
+//        print(indexPath)
       
         //navigate to polician select page
         let vc = storyboard?.instantiateViewController(withIdentifier: "PoliticianSelect") as! PoliticianSelectViewController
+        vc.state = StateViewController.states[indexPath[1]]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -58,10 +54,16 @@ extension StateViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell", for:indexPath)
-        cell.textLabel?.text = StateViewController.states[indexPath.row]
-        cell.textLabel?.textAlignment = .center
-        cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
+//        stateIcon = UIImageView(image: UIImage(named: "icons8-alabama-50"))
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell", for:indexPath) as! StateTableViewCell
+        cell.label.text = StateViewController.states[indexPath.row]
+        let imageName = "icons8-\(StateViewController.states[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "-", options: .literal, range: nil))-50"
+        cell.stateIcon.image = UIImage(named: imageName)
+        
+//        cell.textLabel?.text = StateViewController.states[indexPath.row]
+//        cell.textLabel?.textAlignment = .center
+//        cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
         
         if(indexPath.row % 2 == 0){
             cell.backgroundColor = UIColor(named: "TekfimGray")
