@@ -54,16 +54,10 @@ extension StateViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        stateIcon = UIImageView(image: UIImage(named: "icons8-alabama-50"))
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell", for:indexPath) as! StateTableViewCell
-        cell.label.text = StateViewController.states[indexPath.row]
-        let imageName = "icons8-\(StateViewController.states[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "-", options: .literal, range: nil))-50"
-        cell.stateIcon.image = UIImage(named: imageName)
-        
-//        cell.textLabel?.text = StateViewController.states[indexPath.row]
-//        cell.textLabel?.textAlignment = .center
-//        cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StateCell", for:indexPath)
+        cell.textLabel?.text = StateViewController.states[indexPath.row]
+        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
         
         if(indexPath.row % 2 == 0){
             cell.backgroundColor = UIColor(named: "TekfimGray")
