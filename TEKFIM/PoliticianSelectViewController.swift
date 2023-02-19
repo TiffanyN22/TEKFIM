@@ -23,43 +23,33 @@ class PoliticianSelectViewController: UIViewController {
         let congresssionalMembersUrl2 = "https://api.congress.gov/v3/member?api_key=\(apiKey)&format=json&limit=250&offset=250"
         let congresssionalMembersUrl3 = "https://api.congress.gov/v3/member?api_key=\(apiKey)&format=json&limit=35&offset=500"
     
-        print(congressionMembers.count)
 
         if (congressionMembers.count == 0){
            Task {
                do {
                    await getFilteredCongressionalData(from: congresssionalMembersUrl, from: congresssionalMembersUrl2, from: congresssionalMembersUrl3)
-                   print("finish waiting for getFilteredCongressionalData")
                }
            }
        } else{
            Task {
                do {
-                   print("getting filtered data")
                    await filterCongressionalData()
                }
            }
        }
-        
         //set up senator table
         senatorsTable.delegate = self
         senatorsTable.dataSource = self
-        updateSenators()
-        
     }
 
     
     private func appendToCongressionMembers(newMembers: [Member]){
         self.congressionMembers.append(contentsOf: newMembers)
-        print("append")
-        print(newMembers.count)
-        print(congressionMembers.count)
     }
     
     private func getFilteredCongressionalData(from url1: String, from url2: String, from url3: String) async{
         //filter
         print("getting congressional data")
-//        let task =
         await getCongressionalData(from: url1)
         print("done with await url 1")
         await getCongressionalData(from: url2)
@@ -68,8 +58,6 @@ class PoliticianSelectViewController: UIViewController {
         print("done with await url 3")
 
         await filterCongressionalData()
-
-        print("done getting data")
     }
     
     private func getCongressionalData(from url: String) async{
@@ -91,21 +79,13 @@ class PoliticianSelectViewController: UIViewController {
             guard let json = result else{
                 return
             }
-//            for i in 0...10{
-//                print(json.members[i].member.name)
-//                print(json.members[i].member.state)
-//            }
-            
-//            await self.appendToCongressionMembers(newMembers: json.members)
+
             Task {
                 do {
                     await self.appendToCongressionMembers(newMembers: json.members)
-//                    await self.congressionMembers.append(contentsOf: json.members)
                     await self.filterCongressionalData()
                 }
             }
-            
-//            print(self.congressionMembers.count)
         })
         task.resume()
         
@@ -122,11 +102,11 @@ class PoliticianSelectViewController: UIViewController {
             self.senators = []
             for i in 0...stateSenators.count-1{
                 self.senators.append(stateSenators[i].member.name)
-//                print(stateSenators[i].member.name)
             }
+            
+            //update senators
             self.updateSenators()
         }
-        print(self.senators)
     }
     
     
