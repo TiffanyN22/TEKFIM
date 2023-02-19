@@ -15,7 +15,7 @@ class CandidateTableViewCell: UITableViewCell {
     
 }
 
-class CanidatesViewController: UIViewController, UITableViewDataSource {
+class CanidatesViewController: UIViewController {
     var apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
     var addressNum = 1263
     var address1st = "Pacific"
@@ -37,19 +37,7 @@ class CanidatesViewController: UIViewController, UITableViewDataSource {
 
 //        candidateTable.delegate = self
 //        candidateTable.dataSource = self
-        tableView.register(UINib(nibName: "YourTableViewCell", bundle: nil), forCellReuseIdentifier: "YourTableViewCell")
         // Do any additional setup after loading the view.
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return candidates.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CandidateCell", for: indexPath) as! CandidateTableViewCell
-        let candidate = candidates[indexPath.row]
-        cell.nameLabel.text = candidate
-        return cell
     }
     
     private func showData(){
