@@ -24,22 +24,22 @@ class PoliticianSelectViewController: UIViewController {
         let congresssionalMembersUrl3 = "https://api.congress.gov/v3/member?api_key=\(apiKey)&format=json&limit=35&offset=500"
     
         print(congressionMembers.count)
+
         if (congressionMembers.count == 0){
-            Task {
-                do {
-                    await getFilteredCongressionalData(from: congresssionalMembersUrl, from: congresssionalMembersUrl2, from: congresssionalMembersUrl3)
-                    print("finish waiting for getFilteredCongressionalData")
-                }
-            }
-        } else{
-            Task {
-                do {
-                    print("getting filtered data")
-                    await filterCongressionalData()
-                }
-            }
-        }
-        
+           Task {
+               do {
+                   await getFilteredCongressionalData(from: congresssionalMembersUrl, from: congresssionalMembersUrl2, from: congresssionalMembersUrl3)
+                   print("finish waiting for getFilteredCongressionalData")
+               }
+           }
+       } else{
+           Task {
+               do {
+                   print("getting filtered data")
+                   await filterCongressionalData()
+               }
+           }
+       }
         
         //set up senator table
         senatorsTable.delegate = self
@@ -47,6 +47,7 @@ class PoliticianSelectViewController: UIViewController {
         updateSenators()
         
     }
+
     
     private func appendToCongressionMembers(newMembers: [Member]){
         self.congressionMembers.append(contentsOf: newMembers)
@@ -59,19 +60,19 @@ class PoliticianSelectViewController: UIViewController {
         //filter
         print("getting congressional data")
 //        let task =
-        let data1 = await getCongressionalData(from: url1)
+        await getCongressionalData(from: url1)
         print("done with await url 1")
-        let data2 = await getCongressionalData(from: url2)
+        await getCongressionalData(from: url2)
         print("done with await url 2")
-        let data3 = await getCongressionalData(from: url3)
+        await getCongressionalData(from: url3)
         print("done with await url 3")
 
         await filterCongressionalData()
-        
+
         print("done getting data")
     }
     
-    private func getCongressionalData(from url: String) async -> Bool{
+    private func getCongressionalData(from url: String) async{
         let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
             guard let data = data, error == nil else{
                 print("something went wrong")
@@ -100,13 +101,14 @@ class PoliticianSelectViewController: UIViewController {
                 do {
                     await self.appendToCongressionMembers(newMembers: json.members)
 //                    await self.congressionMembers.append(contentsOf: json.members)
+                    await self.filterCongressionalData()
                 }
             }
             
 //            print(self.congressionMembers.count)
         })
         task.resume()
-        return true
+        
     }
     
     private func filterCongressionalData() async{
@@ -120,7 +122,9 @@ class PoliticianSelectViewController: UIViewController {
             self.senators = []
             for i in 0...stateSenators.count-1{
                 self.senators.append(stateSenators[i].member.name)
+//                print(stateSenators[i].member.name)
             }
+            self.updateSenators()
         }
         print(self.senators)
     }
