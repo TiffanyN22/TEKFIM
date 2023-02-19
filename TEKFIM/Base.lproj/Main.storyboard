@@ -86,13 +86,14 @@
                             <outlet property="h" destination="8jl-eG-tDi" id="FBM-ZK-wef"/>
                             <outlet property="nameLabelYes" destination="8jl-eG-tDi" id="qsR-6l-wGv"/>
                             <outlet property="table" destination="8jl-eG-tDi" id="c5K-oE-Yea"/>
+                            <outlet property="tableView" destination="8jl-eG-tDi" id="SYQ-m5-AfG"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Qdl-Iv-Q8U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1A-1f-jJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2039" y="918"/>
+            <point key="canvasLocation" x="2039" y="796"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="FDS-Cx-FTP">

@@ -8,14 +8,17 @@
 import UIKit
 import AVFoundation
 
-public var count = 0
-
-class CandidateTableViewCell: UITableViewCell {
-    @IBOutlet weak var NameLabel: UITableView!
+class Contest {
+    var name: String
+    var participants: [String]
     
+    init(name: String, participants: [String]) {
+        self.name = name
+        self.participants = participants
+    }
 }
 
-class CanidatesViewController: UIViewController {
+class CanidatesViewController: UIViewController, UITableViewDataSource{
     var apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
     var addressNum = 1263
     var address1st = "Pacific"
@@ -25,6 +28,7 @@ class CanidatesViewController: UIViewController {
     var state = "KS"
     var electionID = 2000
     
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
@@ -39,10 +43,7 @@ class CanidatesViewController: UIViewController {
 //        candidateTable.dataSource = self
         // Do any additional setup after loading the view.
     }
-    
-    private func showData(){
-        
-    }
+ 
     private func getData(from url: String){
         let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
             guard let data = data, error == nil else{
@@ -81,6 +82,32 @@ class CanidatesViewController: UIViewController {
 
         task.resume()
 
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return contests.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contests[section].participants.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+        let participant = contests[indexPath.section].participants[indexPath.row]
+        cell.textLabel?.text = participant
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .lightGray
+        let headerLabel = UILabel(frame: CGRect(x: 15, y: 0, width: tableView.frame.size.width - 15, height: 30))
+        headerLabel.text = contests[section].name
+        headerLabel.textColor = .black
+        headerView.addSubview(headerLabel)
+        return headerView
     }
     
 //    class MyTableViewController: UITableViewController {
