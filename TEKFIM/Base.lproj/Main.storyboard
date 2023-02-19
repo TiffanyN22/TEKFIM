@@ -62,6 +62,15 @@
                     <view key="view" contentMode="scaleToFill" id="Pzj-pB-MRw" customClass="CanidateViewController">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9y-ZY-94E">
+                                <rect key="frame" x="167" y="136" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lo8-tN-O47"/>
                         <color key="backgroundColor" name="TekfimNavy"/>
                     </view>
@@ -69,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1A-1f-jJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2169" y="108"/>
+            <point key="canvasLocation" x="2168.7022900763359" y="107.74647887323944"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="62J-6U-w5j">
@@ -120,6 +129,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IUn-Me-PU3">
                                                 <rect key="frame" x="221.99999999999997" y="8" width="51.000000000000028" height="31"/>
                                                 <connections>
+                                                    <action selector="ShowVotingSites:" destination="exc-o3-IXi" eventType="valueChanged" id="oEd-df-8IG"/>
                                                     <action selector="Show_Early_Sites:" destination="exc-o3-IXi" eventType="valueChanged" id="Xeq-Qa-X7p"/>
                                                     <action selector="earlybutton:" destination="exc-o3-IXi" eventType="valueChanged" id="9bo-V4-bla"/>
                                                 </connections>
@@ -129,7 +139,6 @@
                                         <constraints>
                                             <constraint firstItem="IUn-Me-PU3" firstAttribute="leading" secondItem="6OO-dB-1DW" secondAttribute="leading" constant="222" id="IAq-wf-NDj"/>
                                             <constraint firstItem="IUn-Me-PU3" firstAttribute="top" secondItem="6OO-dB-1DW" secondAttribute="top" constant="8" id="WMI-fg-kAs"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="YVJ-Ui-xLr"/>
                                             <constraint firstAttribute="height" constant="46" id="f2E-68-iGV"/>
                                             <constraint firstAttribute="trailing" secondItem="IUn-Me-PU3" secondAttribute="trailing" constant="17" id="j9O-T0-adP"/>
                                         </constraints>
@@ -137,8 +146,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdA-th-epD">
                                         <rect key="frame" x="53" y="194" width="286" height="46"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Early Voting Sites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8O-Ed-oG8">
-                                                <rect key="frame" x="18" y="10" width="165" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop Off Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8O-Ed-oG8">
+                                                <rect key="frame" x="18" y="10" width="196" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -146,6 +155,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pw0-gH-Cj1">
                                                 <rect key="frame" x="222" y="8" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="ShowDropLocations:" destination="exc-o3-IXi" eventType="valueChanged" id="APh-Pi-imp"/>
                                                     <action selector="Show_Early_Sites:" destination="exc-o3-IXi" eventType="valueChanged" id="OcJ-Ej-4VZ"/>
                                                     <action selector="earlybutton:" destination="exc-o3-IXi" eventType="valueChanged" id="kZc-xC-kAg"/>
                                                 </connections>
@@ -156,7 +166,7 @@
                                             <constraint firstItem="Q8O-Ed-oG8" firstAttribute="top" secondItem="HdA-th-epD" secondAttribute="top" constant="10" id="MLe-82-6YA"/>
                                             <constraint firstItem="Q8O-Ed-oG8" firstAttribute="leading" secondItem="HdA-th-epD" secondAttribute="leading" constant="18" id="MQU-Xi-8GY"/>
                                             <constraint firstItem="Pw0-gH-Cj1" firstAttribute="top" secondItem="HdA-th-epD" secondAttribute="top" constant="8" id="Ohg-NO-V7d"/>
-                                            <constraint firstAttribute="trailing" secondItem="Q8O-Ed-oG8" secondAttribute="trailing" constant="103" id="eh6-rM-mTg"/>
+                                            <constraint firstItem="Pw0-gH-Cj1" firstAttribute="leading" secondItem="Q8O-Ed-oG8" secondAttribute="trailing" constant="8" symbolic="YES" id="SSj-yb-hRw"/>
                                             <constraint firstAttribute="bottom" secondItem="Pw0-gH-Cj1" secondAttribute="bottom" constant="7" id="q7O-YW-q3Z"/>
                                             <constraint firstAttribute="trailing" secondItem="Pw0-gH-Cj1" secondAttribute="trailing" constant="15" id="s7E-vZ-wGp"/>
                                             <constraint firstItem="Pw0-gH-Cj1" firstAttribute="leading" secondItem="HdA-th-epD" secondAttribute="leading" constant="222" id="s9P-zf-CWR"/>

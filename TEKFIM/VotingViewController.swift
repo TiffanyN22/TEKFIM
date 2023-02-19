@@ -14,6 +14,7 @@ class VotingViewController: UIViewController {
     let apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
     let address = "1263 Pacific Ave. Kansas City KS"
 
+   
     @IBOutlet weak var Map: GMSMapView!
     @IBOutlet weak var placeTextField: UITextField!
     
@@ -26,7 +27,12 @@ class VotingViewController: UIViewController {
         Map.camera = camera
         
     }
-
+    @IBAction func ShowVotingSites(_ sender: Any) {
+        
+    }
+    @IBAction func ShowDropLocations(_ sender: Any) {
+        
+       }
 }
 
 
