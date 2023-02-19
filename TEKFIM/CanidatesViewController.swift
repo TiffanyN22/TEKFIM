@@ -76,12 +76,12 @@ class CanidatesViewController: UIViewController, UITableViewDataSource{
             
             let k = json.contests.count-1
             for i in 0...k{
-                print(json.contests[i].type)
+                print(json.contests[i].office)
                 if(json.contests[i].candidates != nil){
                     let m = json.contests[i].candidates!.count - 1
                         for j in 0...m {
                             print(json.contests[i].candidates![j].name)
-                            let contest = Contest(name: json.contests[i].type, participants: ["Alice", "Bob", "Charlie"])
+                            let contest = Contest(name: json.contests[i].office, participants: ["Alice", "Bob", "Charlie"])
                         }
                 }
                 
@@ -189,7 +189,7 @@ class CanidatesViewController: UIViewController, UITableViewDataSource{
     */
     
     struct Contests: Codable {
-        let type: String
+        let office: String
         //let office: String
         //let level: [Level]
         //let roles: [Roles]
