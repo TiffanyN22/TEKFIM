@@ -9,10 +9,14 @@ import UIKit
 
 class PoliticianSelectViewController: UIViewController {
     @IBOutlet weak var senatorsTable: UITableView!
+    @IBOutlet weak var representativeTable: UITableView!
     
     var state: String = "Alaska"
-    var congressionMembers: [Member] = []
+    var congressionalMembers: [Member] = []
     var senators: [Member] = []
+    var senatorsTest = ["Sen1", "Sen2"]
+    var representatives: [Member] = []
+    var representativesTest = ["Rep1", "Rep2", "Rep3", "Rep4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,7 @@ class PoliticianSelectViewController: UIViewController {
         let congresssionalMembersUrl3 = "https://api.congress.gov/v3/member?api_key=\(apiKey)&format=json&limit=35&offset=500"
     
 
-        if (congressionMembers.count == 0){
+        if (congressionalMembers.count == 0){
            Task {
                do {
                    await getFilteredCongressionalData(from: congresssionalMembersUrl, from: congresssionalMembersUrl2, from: congresssionalMembersUrl3)
@@ -40,11 +44,13 @@ class PoliticianSelectViewController: UIViewController {
         //set up senator table
         senatorsTable.delegate = self
         senatorsTable.dataSource = self
+        representativeTable.delegate = self
+        representativeTable.dataSource = self
     }
 
     
-    private func appendToCongressionMembers(newMembers: [Member]){
-        self.congressionMembers.append(contentsOf: newMembers)
+    private func appendToCongressionalMembers(newMembers: [Member]){
+        self.congressionalMembers.append(contentsOf: newMembers)
     }
     
     private func getFilteredCongressionalData(from url1: String, from url2: String, from url3: String) async{
@@ -82,7 +88,7 @@ class PoliticianSelectViewController: UIViewController {
 
             Task {
                 do {
-                    await self.appendToCongressionMembers(newMembers: json.members)
+                    await self.appendToCongressionalMembers(newMembers: json.members)
                     await self.filterCongressionalData()
                 }
             }
@@ -92,9 +98,11 @@ class PoliticianSelectViewController: UIViewController {
     }
     
     private func filterCongressionalData() async{
-        print(self.congressionMembers.count)
-        let stateSenators = self.congressionMembers.filter { currentMember in
-            return currentMember.member.state == self.state && currentMember.member.served.Senate != nil && currentMember.member.served.Senate?[0].end == nil //TODO: filter senator vs rep
+        //filter senators
+        print("congressinoalMember count:")
+        print(self.congressionalMembers.count)
+        let stateSenators = self.congressionalMembers.filter { currentMember in
+            return currentMember.member.state == self.state && currentMember.member.served.Senate != nil && currentMember.member.served.Senate?[0].end == nil
         }
         if(stateSenators.count == 0){
             print("No senators found")
@@ -102,10 +110,32 @@ class PoliticianSelectViewController: UIViewController {
             self.senators = []
             for i in 0...stateSenators.count-1{
                 self.senators.append(stateSenators[i])
+                print(stateSenators[i].member.name)
             }
             
-            //update senators
+//            //update table
+            print("senators")
+            print(self.senators.count)
+            print(self.senators[0].member.name)
+            print(self.senators[1].member.name)
             self.updateSenators()
+        }
+        
+        //filter house of representatives
+        let stateRepresentatives = self.congressionalMembers.filter { currentMember in
+            return currentMember.member.state == self.state && currentMember.member.served.House != nil && currentMember.member.served.House?[0].end == nil
+        }
+        if(stateRepresentatives.count == 0){
+            print("No senators found")
+        } else{
+            self.representatives = []
+            for i in 0...stateRepresentatives.count-1{
+                self.representatives.append(stateRepresentatives[i])
+                print(stateRepresentatives[i].member.name)
+            }
+            
+            //update table
+            self.updateRepresentatives()
         }
     }
     
@@ -137,24 +167,29 @@ class PoliticianSelectViewController: UIViewController {
         let end: Int?
         let start: Int
     }
+    
     func updateSenators(){
         senatorsTable.reloadData()
+    }
+    func updateRepresentatives(){
+        representativeTable.reloadData()
     }
 }
 
 extension PoliticianSelectViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true) //deselect or unhghlight app, indexPath is position
-//        print(indexPath)
-      
-        //navigate to polician select page
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileSummary") as! ProfileSummaryViewController
-        
-//        print(PoliticianSelectViewController.senatorsTable[indexPath[1]].member.bioguideId)
-        vc.bioguideId = self.senators[indexPath[1]].member.bioguideId
-        navigationController?.pushViewController(vc, animated: true)
-//        vc.state = StateViewController.states[indexPath[1]]
-
+        if(tableView == senatorsTable){
+            //navigate to politician select page
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileSummary") as! ProfileSummaryViewController
+            vc.bioguideId = self.senators[indexPath[1]].member.bioguideId
+            navigationController?.pushViewController(vc, animated: true)
+        } else{
+            //navigate to politician select page
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileSummary") as! ProfileSummaryViewController
+            vc.bioguideId = self.representatives[indexPath[1]].member.bioguideId
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -162,21 +197,41 @@ extension PoliticianSelectViewController: UITableViewDelegate {
 
 extension PoliticianSelectViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.senators.count;
+        if(tableView == senatorsTable){
+            return self.senators.count
+//            return self.senatorsTest.count
+        } else{
+            return self.representatives.count
+//            return self.representativesTest.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SenatorCell", for:indexPath)
-        cell.textLabel?.text = self.senators[indexPath.row].member.name
-        cell.textLabel?.textAlignment = .center
-        cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
-        
-        if(indexPath.row % 2 == 0){
-            cell.backgroundColor = UIColor(named: "TekfimGray")
+        if(tableView == senatorsTable){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SenatorCell", for:indexPath)
+            cell.textLabel?.text = self.senators[indexPath.row].member.name
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
+            
+            if(indexPath.row % 2 == 0){
+                cell.backgroundColor = UIColor(named: "TekfimGray")
+            } else{
+                cell.backgroundColor = UIColor(named: "TekfimRed")
+            }
+            return cell
         } else{
-            cell.backgroundColor = UIColor(named: "TekfimRed")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "representativeCell", for:indexPath)
+            cell.textLabel?.text = self.representatives[indexPath.row].member.name
+//            cell.textLabel?.text = self.representativesTest[indexPath.row]
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = UIColor(named: "TekfimNavy")
+            
+            if(indexPath.row % 2 == 0){
+                cell.backgroundColor = UIColor(named: "TekfimGray")
+            } else{
+                cell.backgroundColor = UIColor(named: "TekfimRed")
+            }
+            return cell
         }
-        
-        return cell
     }
 }
