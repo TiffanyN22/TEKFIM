@@ -38,7 +38,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Make Tiffany Happy"/>
                                 <connections>
-                                    <segue destination="yDW-aQ-qnp" kind="show" id="5yC-NI-wq8"/>
+                                    <segue destination="JzJ-S1-2dN" kind="show" id="Ql6-KU-3Bm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,39 +98,10 @@
             </objects>
             <point key="canvasLocation" x="2038.9312977099237" y="795.77464788732402"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="FDS-Cx-FTP">
-            <objects>
-                <tableViewController id="NC8-zz-IL3" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="y5h-Ah-2NL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="t6R-D4-qdy">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t6R-D4-qdy" id="ZCs-ay-ySF">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="NC8-zz-IL3" id="yK8-m0-Uxn"/>
-                            <outlet property="delegate" destination="NC8-zz-IL3" id="JF4-9M-k1K"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="WZ7-s6-7VC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4X3-Kv-Nvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2039" y="108"/>
-        </scene>
-        <!--View Controller-->
+        <!--Voting View Controller-->
         <scene sceneID="62J-6U-w5j">
             <objects>
-                <viewController id="yDW-aQ-qnp" sceneMemberID="viewController">
+                <viewController id="yDW-aQ-qnp" customClass="VotingViewController" customModule="TEKFIM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TaR-Gm-gZB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,8 +214,71 @@
             </objects>
             <point key="canvasLocation" x="1209.9236641221373" y="107.74647887323944"/>
         </scene>
+        <!--Input TextUI View Controller-->
+        <scene sceneID="rz8-nt-Rtk">
+            <objects>
+                <viewController id="JzJ-S1-2dN" customClass="InputTextUIViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cEy-Co-OaI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123 Loyola Drive San Jose CA 95120 " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LbH-oU-G5H">
+                                <rect key="frame" x="52" y="351" width="289" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="9FV-Ax-yL7"/>
+                                    <constraint firstAttribute="height" constant="34" id="MdK-3x-zOq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYd-DC-Dvo">
+                                <rect key="frame" x="126.66666666666669" y="449" width="140" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="dJ2-53-EHP"/>
+                                    <constraint firstAttribute="height" constant="55" id="sV2-rh-W6R"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="View Election Information" titleAlignment="center">
+                                    <color key="baseForegroundColor" name="TekfimNavy"/>
+                                    <color key="baseBackgroundColor" name="TekfimGray"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yDW-aQ-qnp" kind="show" identifier="goToNext" id="fL7-Ns-PXt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Address to Find Local Elections" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfP-ju-1ch">
+                                <rect key="frame" x="65" y="228" width="263" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="3If-yG-MOL"/>
+                                    <constraint firstAttribute="width" constant="263" id="k6y-dw-0KZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" name="TekfimGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z5T-sm-E69"/>
+                        <color key="backgroundColor" name="TekfimNavy"/>
+                        <constraints>
+                            <constraint firstItem="LbH-oU-G5H" firstAttribute="centerX" secondItem="z5T-sm-E69" secondAttribute="centerX" id="GRK-hA-png"/>
+                            <constraint firstItem="oYd-DC-Dvo" firstAttribute="centerX" secondItem="z5T-sm-E69" secondAttribute="centerX" id="Ie5-wO-8pa"/>
+                            <constraint firstItem="RfP-ju-1ch" firstAttribute="centerX" secondItem="z5T-sm-E69" secondAttribute="centerX" id="eDU-2S-j8W"/>
+                            <constraint firstItem="RfP-ju-1ch" firstAttribute="top" secondItem="z5T-sm-E69" secondAttribute="top" constant="125" id="pcD-px-JKm"/>
+                            <constraint firstItem="oYd-DC-Dvo" firstAttribute="top" secondItem="LbH-oU-G5H" secondAttribute="bottom" constant="64" id="u8g-NM-JqZ"/>
+                            <constraint firstItem="LbH-oU-G5H" firstAttribute="top" secondItem="RfP-ju-1ch" secondAttribute="bottom" constant="41" id="wC9-JL-0hg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OVV-6d-68y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sxz-7j-Gxf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.70992366412213" y="814.78873239436621"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="TekfimGray">
+            <color red="0.90200001001358032" green="0.90200001001358032" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="TekfimNavy">
             <color red="0.1803921568627451" green="0.20000000000000001" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

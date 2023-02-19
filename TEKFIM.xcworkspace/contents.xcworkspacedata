@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:InputTextUIViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:TEKFIM.xcodeproj">
    </FileRef>
    <FileRef

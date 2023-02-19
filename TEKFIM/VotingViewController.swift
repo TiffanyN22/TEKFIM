@@ -15,7 +15,6 @@ class VotingViewController: UIViewController {
     let address = "1263 Pacific Ave. Kansas City KS"
     
    
-    @IBOutlet weak var Map: GMSMapView!
     @IBOutlet weak var placeTextField: UITextField!
     
     
@@ -38,33 +37,33 @@ class VotingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let camera = GMSCameraPosition.camera(withLatitude: 37.4222525, longitude: 37.4222525, zoom: 6.0)
+        /*let camera = GMSCameraPosition.camera(withLatitude: 37.4222525, longitude: 37.4222525, zoom: 6.0)
         Map.camera = camera
         
         let hardMarker = GMSMarker()
         hardMarker.position = CLLocationCoordinate2D(latitude: 52.192143, longitude: -1.063709)
         hardMarker.title = "Sydney"
-        
+        */
         var initialAddress = "1263 Pacific Ave Kansas City KS"
         
         var getAddressesUrl = "https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM&address=\(getAddString(from: initialAddress))&electionId=2000"
         
         getAppData(from: getAddressesUrl)
         
-        var k = ads.count
-        for i in 0...k{
+//        var k = ads.count
+//        for i in 0...k{
             
-            var urlForFlags = "https://maps.googleapis.com/maps/api/geocode/json?place_id=\(getAddString(from: ads[i]))&key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
-            getLongData(from: urlForFlags)
+//            var urlForFlags = "https://maps.googleapis.com/maps/api/geocode/json?place_id=\(getAddString(from: ads[i]))&key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
+            //getLongData(from: urlForFlags)
             /*https://maps.googleapis.com/maps/api/geocode/json?place_id=ChIJeRpOeF67j4AR9ydy_PIzPuM&key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM
              */
             //add marker
-            let marker = GMSMarker()
+            /*let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: latlon[0], longitude: latlon[1])
             marker.title = "Sydney"
-            marker.snippet = "Australia"
+            marker.snippet = "Australia"*/
             
-        }
+//        }
         
         
         
