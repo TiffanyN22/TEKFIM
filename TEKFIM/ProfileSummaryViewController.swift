@@ -194,9 +194,9 @@ extension ProfileSummaryViewController: UITableViewDelegate {
         vc.billType = self.sponsoredLegislationList[indexPath[1]].type!
         vc.billNumber = self.sponsoredLegislationList[indexPath[1]].number!
         vc.billTitle = self.sponsoredLegislationList[indexPath[1]].title!
+        vc.billCongress = self.sponsoredLegislationList[indexPath[1]].congress
 
         navigationController?.pushViewController(vc, animated: true)
-        
     }
 }
 
