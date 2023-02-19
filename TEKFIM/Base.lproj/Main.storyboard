@@ -233,11 +233,196 @@
             </objects>
             <point key="canvasLocation" x="1872.5190839694656" y="107.74647887323944"/>
         </scene>
+        <!--New Account Controller-->
+        <scene sceneID="L9H-l7-bsU">
+            <objects>
+                <viewController id="DAI-TI-kRZ" customClass="NewAccountController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nZy-ZR-c1a" customClass="SignUpController">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Create an Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJi-WL-6IJ">
+                                <rect key="frame" x="109" y="112.33333333333333" width="176" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" name="TekfimNavy"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="1Gy-ED-WaJ">
+                                <rect key="frame" x="76" y="156" width="256" height="202"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMB-5E-cm8">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3pm-zZ-vSO"/>
+                                            <constraint firstAttribute="width" constant="256" id="ZpV-0h-zh8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qam-RH-3Gk">
+                                        <rect key="frame" x="0.0" y="81" width="256" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MjX-PV-jgX"/>
+                                            <constraint firstAttribute="width" constant="256" id="dNN-xV-zEq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1B-AM-ieM">
+                                        <rect key="frame" x="0.0" y="162.00000000000003" width="256" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="R5O-7I-WO6"/>
+                                            <constraint firstAttribute="width" constant="256" id="ZG9-4c-Hkf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1u-FN-y4w">
+                                <rect key="frame" x="76" y="420" width="256" height="34.333333333333314"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.65296099429999999" blue="0.46044334040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign Up" cornerStyle="medium" titleAlignment="center">
+                                    <color key="baseForegroundColor" name="TekfimGray"/>
+                                    <color key="baseBackgroundColor" red="0.20392156859999999" green="0.65296099429999999" blue="0.46044334040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nek-uj-feI"/>
+                        <color key="backgroundColor" name="TekfimRed"/>
+                        <constraints>
+                            <constraint firstItem="nek-uj-feI" firstAttribute="trailing" secondItem="1Gy-ED-WaJ" secondAttribute="trailing" constant="150" id="FWc-4Z-YKL"/>
+                            <constraint firstItem="nek-uj-feI" firstAttribute="bottom" secondItem="i1u-FN-y4w" secondAttribute="bottom" constant="300" id="IK3-TY-2Fh"/>
+                            <constraint firstItem="1Gy-ED-WaJ" firstAttribute="top" secondItem="IJi-WL-6IJ" secondAttribute="bottom" constant="8" id="Rji-BX-KWk"/>
+                            <constraint firstItem="i1u-FN-y4w" firstAttribute="top" secondItem="1Gy-ED-WaJ" secondAttribute="bottom" constant="100" id="VQI-Xt-prG"/>
+                            <constraint firstItem="1Gy-ED-WaJ" firstAttribute="leading" secondItem="nek-uj-feI" secondAttribute="leading" constant="150" id="W1c-ID-6pO"/>
+                            <constraint firstItem="nek-uj-feI" firstAttribute="trailing" secondItem="i1u-FN-y4w" secondAttribute="trailing" constant="150" id="Xgv-6B-W9o"/>
+                            <constraint firstItem="i1u-FN-y4w" firstAttribute="leading" secondItem="nek-uj-feI" secondAttribute="leading" constant="150" id="Z1a-JJ-mrF"/>
+                            <constraint firstItem="i1u-FN-y4w" firstAttribute="top" secondItem="1Gy-ED-WaJ" secondAttribute="bottom" constant="300" id="fen-df-MIY"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="addressField" destination="B1B-AM-ieM" id="XIA-tg-VIL"/>
+                            <outlet property="signUpEmailField" destination="kMB-5E-cm8" id="cAn-L7-zPk"/>
+                            <outlet property="signUpInfoButt" destination="i1u-FN-y4w" id="rl1-f6-ybU"/>
+                            <outlet property="signUpPassField" destination="Qam-RH-3Gk" id="C2I-U3-hhD"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ctg-TY-iUO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czF-H4-r4U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="810"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="vOj-zd-13e">
+            <objects>
+                <viewController id="69x-3a-FwH" customClass="LoginController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fsF-TO-N2P" customClass="LoginController">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="uh8-XD-lve">
+                                <rect key="frame" x="68" y="153" width="256" height="547.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TEKFIM Logo" translatesAutoresizingMaskIntoConstraints="NO" id="d68-ox-CEX">
+                                        <rect key="frame" x="38.666666666666657" y="0.0" width="179" height="174"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="179" id="9Gf-WL-Wlh"/>
+                                            <constraint firstAttribute="height" constant="174" id="QT7-j8-hvp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="presented by TEKFIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdd-nc-vbz">
+                                        <rect key="frame" x="7.3333333333333286" y="212" width="241.33333333333337" height="29.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" name="TekfimNavy"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="oda-mh-g7l">
+                                        <rect key="frame" x="0.0" y="279.33333333333331" width="256" height="116"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nnf-Ob-ucq">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="F2Y-WD-r8p"/>
+                                                    <constraint firstAttribute="width" constant="256" id="V1U-FX-0Ys"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-ZJ-vNF">
+                                                <rect key="frame" x="0.0" y="76" width="256" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Kw1-po-zc4"/>
+                                                    <constraint firstAttribute="width" constant="256" id="fEt-ua-V6W"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yRm-1o-GWh">
+                                        <rect key="frame" x="28" y="433.33333333333331" width="200" height="114.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLz-KR-J6l">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="nFo-8n-EsP"/>
+                                                    <constraint firstAttribute="height" constant="50" id="puO-Zs-bXT"/>
+                                                </constraints>
+                                                <color key="tintColor" name="TekfimNavy"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="medium" titleAlignment="center">
+                                                    <color key="baseForegroundColor" name="TekfimGray"/>
+                                                    <color key="baseBackgroundColor" name="TekfimNavy"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="69x-3a-FwH" kind="show" id="T5c-6Z-osB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4P-Gc-IQ3">
+                                                <rect key="frame" x="0.0" y="80.000000000000057" width="200" height="34.333333333333343"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="f5o-vm-Iif"/>
+                                                </constraints>
+                                                <color key="tintColor" name="TekfimNavy"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Sign Up" cornerStyle="medium" titleAlignment="center">
+                                                    <color key="baseForegroundColor" name="TekfimGray"/>
+                                                    <color key="baseBackgroundColor" name="TekfimRed"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="DAI-TI-kRZ" kind="show" id="lS3-Vc-PsQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YMF-zh-8XI"/>
+                        <color key="backgroundColor" name="TekfimRed"/>
+                        <connections>
+                            <outlet property="emailField" destination="Nnf-Ob-ucq" id="2oO-C3-ahR"/>
+                            <outlet property="loginButt" destination="dLz-KR-J6l" id="7UR-Rf-gWK"/>
+                            <outlet property="passField" destination="sbP-ZJ-vNF" id="dxd-ln-abE"/>
+                            <outlet property="password" destination="sbP-ZJ-vNF" id="ukV-kv-guc"/>
+                            <outlet property="signUp" destination="s4P-Gc-IQ3" id="Isg-k8-v5N"/>
+                            <outlet property="signUpButt" destination="s4P-Gc-IQ3" id="jYb-RN-Osf"/>
+                            <outlet property="username" destination="Nnf-Ob-ucq" id="6u0-LS-hxL"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="iZ2-J7-MGK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hxe-Hr-BPA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="810"/>
+        </scene>
     </scenes>
     <resources>
         <image name="TEKFIM Logo" width="780" height="787"/>
         <namedColor name="TekfimBlue">
-            <color red="0.6549019814" green="0.7254902124" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.65499997138977051" green="0.72500002384185791" blue="0.80400002002716064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TekfimGray">
             <color red="0.90196073060000004" green="0.90196073060000004" blue="0.90196073060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -246,7 +431,7 @@
             <color red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TekfimRed">
-            <color red="0.70588237050000002" green="0.37647059560000001" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.70588235294117652" green="0.37647058823529411" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

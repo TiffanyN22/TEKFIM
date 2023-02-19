@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		983B7CF229A19FE600878465 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B7CF129A19FE600878465 /* LoginController.swift */; };
+		983B7CF429A19FFE00878465 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983B7CF329A19FFE00878465 /* SignUpController.swift */; };
 		C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */; };
 		C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */; };
 		C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5329A1543400E6BC0C /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		983B7CF129A19FE600878465 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		983B7CF329A19FFE00878465 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		C6B77A4C29A1543400E6BC0C /* TEKFIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEKFIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				C6B77A6329A15B3100E6BC0C /* HomeViewController.swift */,
 				C6B77A6529A15EC300E6BC0C /* StateViewController.swift */,
 				C6B77A6729A175B800E6BC0C /* PoliticianSelectViewController.swift */,
+				983B7CF129A19FE600878465 /* LoginController.swift */,
+				983B7CF329A19FFE00878465 /* SignUpController.swift */,
 			);
 			path = TEKFIM;
 			sourceTree = "<group>";
@@ -150,9 +156,11 @@
 				C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */,
 				C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */,
 				C6B77A6829A175B800E6BC0C /* PoliticianSelectViewController.swift in Sources */,
+				983B7CF429A19FFE00878465 /* SignUpController.swift in Sources */,
 				C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */,
 				C6B77A6429A15B3100E6BC0C /* HomeViewController.swift in Sources */,
 				C6B77A6629A15EC300E6BC0C /* StateViewController.swift in Sources */,
+				983B7CF229A19FE600878465 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
