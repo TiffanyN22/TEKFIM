@@ -30,12 +30,6 @@ class StateViewController: UIViewController {
     }
     
     func updateStates(){
-        //iterate from 0 to count, incluseve, add add tas
-//        for x in 0..<StateViewController.states.count {
-//            if let task = UserDefaults().value(forKey: "task_\(x+1)") as? String{
-//                tasks.append(task)
-//            }
-//        }
         statesTable.reloadData()
     }
     
@@ -45,9 +39,11 @@ extension StateViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.backgroundColor = UIColor(named: "TekfimNavy")
         tableView.deselectRow(at: indexPath, animated: true) //deselect or unhghlight app, indexPath is position
+//        print(indexPath)
       
         //navigate to polician select page
         let vc = storyboard?.instantiateViewController(withIdentifier: "PoliticianSelect") as! PoliticianSelectViewController
+        vc.state = StateViewController.states[indexPath[1]]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
