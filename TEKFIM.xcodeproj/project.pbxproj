@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E3329F129A1AD0100CC4357 /* CanidatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */; };
 		4EAE6AE929A160DB005102D0 /* VotingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAE6AE829A160DB005102D0 /* VotingViewController.swift */; };
+		4EE301E529A28A12002F80BC /* InputTextUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE301E429A28A12002F80BC /* InputTextUIViewController.swift */; };
 		8ED4AA605011EBD031E27011 /* Pods_TEKFIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */; };
 		C12BE0FE29A1A68A00F6E62A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C12BE0FD29A1A68A00F6E62A /* FirebaseAuth */; };
 		C12BE10029A1A68A00F6E62A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C12BE0FF29A1A68A00F6E62A /* FirebaseFirestore */; };
@@ -16,7 +17,7 @@
 		C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */; };
 		C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */; };
 		C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B77A5329A1543400E6BC0C /* ViewController.swift */; };
-		C6B77A5729A1543400E6BC0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5529A1543400E6BC0C /* Main.storyboard */; };
+		C6B77A5729A1543400E6BC0C /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5529A1543400E6BC0C /* Main2.storyboard */; };
 		C6B77A5929A1543500E6BC0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5829A1543500E6BC0C /* Assets.xcassets */; };
 		C6B77A5C29A1543500E6BC0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanidatesViewController.swift; sourceTree = "<group>"; };
 		4EAE6AE829A160DB005102D0 /* VotingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingViewController.swift; sourceTree = "<group>"; };
+		4EE301E429A28A12002F80BC /* InputTextUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputTextUIViewController.swift; path = /Users/Kara/TEKFIM/TEKFIM/InputTextUIViewController.swift; sourceTree = "<absolute>"; };
 		6DE3B67685F97D094FD35693 /* Pods-TEKFIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKFIM.debug.xcconfig"; path = "Target Support Files/Pods-TEKFIM/Pods-TEKFIM.debug.xcconfig"; sourceTree = "<group>"; };
 		8E64585E01F9DD673640875B /* Pods_TEKFIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEKFIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12BE10129A1A6C700F6E62A /* GoogleService-Info-7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-7.plist"; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C6B77A5329A1543400E6BC0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6B77A5629A1543400E6BC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6B77A5629A1543400E6BC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 		C6B77A5829A1543500E6BC0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6B77A5B29A1543500E6BC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6B77A5D29A1543500E6BC0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,10 +93,11 @@
 			isa = PBXGroup;
 			children = (
 				C12BE10129A1A6C700F6E62A /* GoogleService-Info-7.plist */,
+				4EE301E429A28A12002F80BC /* InputTextUIViewController.swift */,
 				C6B77A4F29A1543400E6BC0C /* AppDelegate.swift */,
 				C6B77A5129A1543400E6BC0C /* SceneDelegate.swift */,
 				C6B77A5329A1543400E6BC0C /* ViewController.swift */,
-				C6B77A5529A1543400E6BC0C /* Main.storyboard */,
+				C6B77A5529A1543400E6BC0C /* Main2.storyboard */,
 				4E3329F029A1AD0100CC4357 /* CanidatesViewController.swift */,
 				C6B77A5829A1543500E6BC0C /* Assets.xcassets */,
 				C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */,
@@ -173,7 +176,7 @@
 			files = (
 				C6B77A5C29A1543500E6BC0C /* LaunchScreen.storyboard in Resources */,
 				C6B77A5929A1543500E6BC0C /* Assets.xcassets in Resources */,
-				C6B77A5729A1543400E6BC0C /* Main.storyboard in Resources */,
+				C6B77A5729A1543400E6BC0C /* Main2.storyboard in Resources */,
 				C12BE10229A1A6C700F6E62A /* GoogleService-Info-7.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE301E529A28A12002F80BC /* InputTextUIViewController.swift in Sources */,
 				C6B77A5429A1543400E6BC0C /* ViewController.swift in Sources */,
 				C6B77A5029A1543400E6BC0C /* AppDelegate.swift in Sources */,
 				C6B77A5229A1543400E6BC0C /* SceneDelegate.swift in Sources */,
@@ -238,12 +242,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C6B77A5529A1543400E6BC0C /* Main.storyboard */ = {
+		C6B77A5529A1543400E6BC0C /* Main2.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C6B77A5629A1543400E6BC0C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main2.storyboard;
 			sourceTree = "<group>";
 		};
 		C6B77A5A29A1543500E6BC0C /* LaunchScreen.storyboard */ = {
