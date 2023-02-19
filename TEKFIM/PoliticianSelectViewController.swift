@@ -91,7 +91,7 @@ class PoliticianSelectViewController: UIViewController {
             return currentMember.member.state == self.state && currentMember.member.served.Senate != nil && currentMember.member.served.Senate?[0].end == nil
         }
         if(stateSenators.count == 0){
-            print("No senators found")
+//            print("No senators found")
         } else{
             self.senators = []
             for i in 0...stateSenators.count-1{
@@ -107,7 +107,7 @@ class PoliticianSelectViewController: UIViewController {
             return currentMember.member.state == self.state && currentMember.member.served.House != nil && currentMember.member.served.House?[0].end == nil
         }
         if(stateRepresentatives.count == 0){
-            print("No representatives found")
+//            print("No representatives found")
         } else{
             self.representatives = []
             for i in 0...stateRepresentatives.count-1{
