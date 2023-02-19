@@ -69,9 +69,11 @@ class ProfileSummaryViewController: UIViewController {
         self.website.text = member?.officialWebsiteUrl
 //        print(member?.officialWebsiteUrl)
         
-        let imageUrl = URL(string: (member?.depiction.imageUrl)!)
+        if(member?.depiction.imageUrl != nil){
+            let imageUrl = URL(string: (member?.depiction.imageUrl)!)
+            self.profileImage.setImage(from: imageUrl!)
+        }
 //        let imageUrl = URL(string: "https://www.congress.gov/img/member/f000062_200.jpg")
-        self.profileImage.setImage(from: imageUrl!)
         
     }
 //    change state for senator

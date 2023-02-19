@@ -183,6 +183,70 @@
             </objects>
             <point key="canvasLocation" x="1119.8473282442749" y="107.74647887323944"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vf5-ux-o1i">
+            <objects>
+                <viewController id="tcj-dU-Ohq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="awy-d0-BeW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pB-E8-hS8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAy-B8-jdP">
+                                        <rect key="frame" x="0.0" y="8" width="393" height="730.66666666666663"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCv-ib-pyM">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="730.66666666666663"/>
+                                                <mutableString key="text">2023-02-19 05:05:13.215057-0800 TEKFIM[92802:515010] [Assert] UINavigationBar decoded as unlocked for UINavigationController, or navigationBar delegate set up incorrectly. Inconsistent configuration may cause problems. navigationController=&lt;UINavigationController: 0x153020800&gt;, navigationBar=&lt;UINavigationBar: 0x152d0a670; frame = (0 59; 0 50); opaque = NO; autoresize = W; layer = &lt;CALayer: 0x600000dd5c80&gt;&gt; delegate=0x153020800
+2023-02-19 05:05:14.147261-0800 TEKFIM[92802:515010] [Warning] Warning once only: Detected a case where constraints ambiguously suggest a height of zero for a table view cell's content view. We're considering the collapse unintentional and using standard height instead. Cell: &lt;TEKFIM.StateTableViewCell: 0x154842400; baseClass = UITableViewCell; frame = (0 50; 393 43.6667); clipsToBounds = YES; autoresize = W; backgroundColor = &lt;UIDynamicCatalogColor: 0x600002ef99f0; name = TekfimGray&gt;; layer = &lt;CALayer: 0x600000d8bf80&gt;&gt;
+P000620
+task resumed
+failed to convert member
+H000273
+task resumed
+ &lt;p&gt;&lt;b&gt;Competitive Onshore Mineral Policy via Eliminating Taxpayer-Enabled Speculation Act or the COMPETES Act&lt;/b&gt;&lt;/p&gt; &lt;p&gt;This bill revises the process of leasing public land for oil and gas development. For example, it requires the Bureau of Land Management (BLM) to issue all onshore oil and gas leasing through a competitive bidding process.&lt;/p&gt; &lt;p&gt;Furt</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="vCv-ib-pyM" firstAttribute="leading" secondItem="cAy-B8-jdP" secondAttribute="leading" id="3m9-Wy-XTs"/>
+                                            <constraint firstItem="vCv-ib-pyM" firstAttribute="top" secondItem="cAy-B8-jdP" secondAttribute="top" id="5Ca-e1-OZP"/>
+                                            <constraint firstAttribute="bottom" secondItem="vCv-ib-pyM" secondAttribute="bottom" id="bar-oJ-RFF"/>
+                                            <constraint firstAttribute="trailing" secondItem="vCv-ib-pyM" secondAttribute="trailing" id="zFo-Rd-2tH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cAy-B8-jdP" firstAttribute="top" secondItem="1pB-E8-hS8" secondAttribute="top" constant="8" id="0as-2D-ugB"/>
+                                    <constraint firstAttribute="bottom" secondItem="cAy-B8-jdP" secondAttribute="bottom" constant="18" id="2oC-DT-Bok"/>
+                                    <constraint firstAttribute="trailing" secondItem="cAy-B8-jdP" secondAttribute="trailing" id="E0N-eR-KUx"/>
+                                    <constraint firstItem="cAy-B8-jdP" firstAttribute="width" secondItem="1pB-E8-hS8" secondAttribute="width" id="Q7a-DW-I3m"/>
+                                    <constraint firstItem="cAy-B8-jdP" firstAttribute="leading" secondItem="1pB-E8-hS8" secondAttribute="leading" id="apV-Pv-JAP"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QgR-0J-hjB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="gNV-5k-lib"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zxL-A5-pow"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1pB-E8-hS8" firstAttribute="top" secondItem="zxL-A5-pow" secondAttribute="top" id="1Oj-k7-B1q"/>
+                            <constraint firstAttribute="bottom" secondItem="1pB-E8-hS8" secondAttribute="bottom" id="VX3-xR-Oer"/>
+                            <constraint firstItem="1pB-E8-hS8" firstAttribute="trailing" secondItem="zxL-A5-pow" secondAttribute="trailing" id="WMs-dc-Pof"/>
+                            <constraint firstItem="1pB-E8-hS8" firstAttribute="leading" secondItem="zxL-A5-pow" secondAttribute="leading" id="pOI-dZ-qZe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TlR-9h-0Gz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1j3-rh-Xfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107.6335877862596" y="784.50704225352115"/>
+        </scene>
         <!--Politician Select View Controller-->
         <scene sceneID="fJg-Td-Ehx">
             <objects>
@@ -453,7 +517,7 @@
                                 <color key="shadowColor" systemColor="systemBlueColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-Xo-7bq">
-                                <rect key="frame" x="16" y="270" width="361" height="227"/>
+                                <rect key="frame" x="16" y="270" width="361" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -462,7 +526,7 @@
                                 <color key="shadowColor" systemColor="systemBlueColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-AR-CUG">
-                                <rect key="frame" x="16" y="518" width="361" height="164"/>
+                                <rect key="frame" x="16" y="535" width="361" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -473,25 +537,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXd-WN-fzi">
                                 <rect key="frame" x="18" y="149" width="357" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="TekfimGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
                                 <color key="shadowColor" systemColor="systemBlueColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r63-eW-UMN">
-                                <rect key="frame" x="18" y="273" width="357" height="222"/>
+                                <rect key="frame" x="18" y="273" width="357" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="TekfimGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
                                 <color key="shadowColor" systemColor="systemBlueColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ML-33-2kB">
-                                <rect key="frame" x="18" y="520" width="357" height="160"/>
+                                <rect key="frame" x="18" y="537" width="357" height="251"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.85098040100000005" green="0.85098040100000005" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" name="TekfimGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
@@ -504,7 +568,7 @@
                                 <color key="textColor" name="TekfimNavy"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VQ-9p-GWB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VQ-9p-GWB">
                                 <rect key="frame" x="39" y="178" width="329" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Proin rutrum arcu aliquet semper tincidunt. Sed venenatis condimentum sollicitudin. In feugiat aliquam nibh. Mauris volutpat eget tortor sed tristique. Morbi semper felis sed est varius, sit amet interdum nisi interdum. </string>
@@ -519,37 +583,61 @@
                                 <color key="textColor" name="TekfimNavy"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpw-VK-OyD">
+                                <rect key="frame" x="44" y="316" width="324" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARo-PP-HXo">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="208"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGr-Bf-zq6">
+                                                <rect key="frame" x="0.0" y="0.0" width="324" height="130.33333333333334"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="324" id="kyF-Jl-7I1"/>
+                                                </constraints>
+                                                <string key="text">Proin rutrum arcu aliquet semper tincidunt. Sed venenatis condimentum sollicitudin. In feugiat aliquam nibh. Mauris volutpat eget tortor sed tristique. Morbi semper felis sed est varius, sit amet interdum nisi interdum. </string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="TekfimGray"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="B39-va-mwP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="c9S-SI-ecc"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OoW-o1-NZy">
+                                <rect key="frame" x="39" y="574" width="329" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITy-1q-0Ji">
+                                        <rect key="frame" x="-20" y="-20" width="369" height="244"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBx-uJ-ei2">
+                                                <rect key="frame" x="20" y="20" width="329" height="216"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Proin rutrum arcu aliquet semper tincidunt. Sed venenatis condimentum sollicitudin. In feugiat aliquam nibh. Mauris volutpat eget tortor sed tristique. Morbi semper felis sed est varius, sit amet interdum nisi interdum. </string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="TekfimGray"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QmQ-Hl-TKm"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8qP-BF-eVY"/>
+                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Actions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7X-4N-dmG">
-                                <rect key="frame" x="33" y="532" width="62" height="21"/>
+                                <rect key="frame" x="33" y="545" width="62" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="TekfimNavy"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBx-uJ-ei2">
-                                <rect key="frame" x="44" y="555" width="329" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Proin rutrum arcu aliquet semper tincidunt. Sed venenatis condimentum sollicitudin. In feugiat aliquam nibh. Mauris volutpat eget tortor sed tristique. Morbi semper felis sed est varius, sit amet interdum nisi interdum. </string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpw-VK-OyD">
-                                <rect key="frame" x="44" y="316" width="324" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGr-Bf-zq6">
-                                        <rect key="frame" x="0.0" y="1" width="324" height="167"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Proin rutrum arcu aliquet semper tincidunt. Sed venenatis condimentum sollicitudin. In feugiat aliquam nibh. Mauris volutpat eget tortor sed tristique. Morbi semper felis sed est varius, sit amet interdum nisi interdum. </string>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="B39-va-mwP"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="c9S-SI-ecc"/>
-                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dbw-gI-9Q6"/>
                         <color key="backgroundColor" red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
