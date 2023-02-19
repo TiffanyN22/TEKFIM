@@ -8,8 +8,6 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
-import Alamofire
-
 
 
 @main
