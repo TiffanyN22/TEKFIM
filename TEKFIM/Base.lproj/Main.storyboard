@@ -355,52 +355,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cosponsored Legislation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOQ-kL-Rwv">
-                                <rect key="frame" x="56" y="403" width="281" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsored Legislation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOQ-kL-Rwv">
+                                <rect key="frame" x="56" y="405" width="281" height="44"/>
                                 <color key="backgroundColor" name="TekfimNavy"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="281" id="Jia-ZS-GcP"/>
+                                    <constraint firstAttribute="width" constant="281" id="cfO-rU-xj1"/>
+                                    <constraint firstAttribute="height" constant="44" id="fuT-xy-Yeo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voting Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyG-P0-v5m">
-                                <rect key="frame" x="56" y="575" width="281" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="TekfimNavy"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legislation #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbf-pC-eUz">
-                                <rect key="frame" x="56" y="449" width="281" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="TekfimBlue"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vote #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0E-ap-Mob">
-                                <rect key="frame" x="56" y="620" width="281" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="TekfimBlue"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legislation #2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tN-SO-Sra">
-                                <rect key="frame" x="56" y="495" width="281" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="TekfimGray"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vote #2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4j-1B-DLc">
-                                <rect key="frame" x="56" y="665" width="281" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="TekfimGray"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkj-jH-HDC">
@@ -410,9 +374,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BQJ-zs-E0R">
+                                <rect key="frame" x="56" y="449" width="281" height="316"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="ja5-xi-fcx"/>
+                                    <constraint firstAttribute="height" constant="316" id="mTS-57-Xjr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="281" id="ucU-ZM-VjW"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sponsoredLegislationCell" id="lkC-D0-qpD">
+                                        <rect key="frame" x="0.0" y="50" width="281" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lkC-D0-qpD" id="Cda-UJ-mbd">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LKI-JA-2MV"/>
                         <color key="backgroundColor" red="0.18039217590000001" green="0.20000001789999999" blue="0.32549020649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="BQJ-zs-E0R" firstAttribute="top" secondItem="kOQ-kL-Rwv" secondAttribute="bottom" id="TZ5-xB-gpI"/>
+                            <constraint firstItem="kOQ-kL-Rwv" firstAttribute="centerX" secondItem="LKI-JA-2MV" secondAttribute="centerX" id="Xiz-J6-TPb"/>
+                            <constraint firstItem="BQJ-zs-E0R" firstAttribute="centerX" secondItem="LKI-JA-2MV" secondAttribute="centerX" id="aHW-gL-Gap"/>
+                            <constraint firstItem="BQJ-zs-E0R" firstAttribute="top" secondItem="kOQ-kL-Rwv" secondAttribute="bottom" id="d8b-me-vYE"/>
+                            <constraint firstItem="LKI-JA-2MV" firstAttribute="bottom" secondItem="BQJ-zs-E0R" secondAttribute="bottom" constant="53" id="jKT-8w-PQ3"/>
+                            <constraint firstItem="BQJ-zs-E0R" firstAttribute="top" secondItem="kOQ-kL-Rwv" secondAttribute="bottom" id="oH6-uw-x2V"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="District" destination="HFY-kO-Wjf" id="NXH-My-GEa"/>
@@ -420,6 +411,7 @@
                         <outlet property="Name" destination="Jkj-jH-HDC" id="R1e-aT-dDX"/>
                         <outlet property="Party" destination="lrO-TQ-VJ1" id="fHo-z6-8j0"/>
                         <outlet property="profileImage" destination="20j-Nf-sxn" id="THX-kd-ayd"/>
+                        <outlet property="sponsoredLegislationTable" destination="BQJ-zs-E0R" id="IAi-CU-v8e"/>
                         <outlet property="view" destination="HlR-fF-b1F" id="Scb-UE-5pN"/>
                         <outlet property="website" destination="eDm-ly-67O" id="KTP-gf-y1L"/>
                     </connections>
