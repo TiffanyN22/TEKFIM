@@ -8,7 +8,14 @@
 import UIKit
 import AVFoundation
 
-class CanidatesViewController: UIViewController {
+public var count = 0
+
+class CandidateTableViewCell: UITableViewCell {
+    @IBOutlet weak var NameLabel: UITableView!
+    
+}
+
+class CanidatesViewController: UIViewController, UITableViewDataSource {
     var apiKey = "AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM"
     var addressNum = 1263
     var address1st = "Pacific"
@@ -18,14 +25,35 @@ class CanidatesViewController: UIViewController {
     var state = "KS"
     var electionID = 2000
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var url = "https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyBjl48j1CVf4T5O-uaPsNY9d_FFOzOsKwM&address=1263%20Pacific%20Ave.%20Kansas%20City%20KS&electionId=2000"
         
         getData(from: url)
+        showData()
 
+//        candidateTable.delegate = self
+//        candidateTable.dataSource = self
+        tableView.register(UINib(nibName: "YourTableViewCell", bundle: nil), forCellReuseIdentifier: "YourTableViewCell")
         // Do any additional setup after loading the view.
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return candidates.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CandidateCell", for: indexPath) as! CandidateTableViewCell
+        let candidate = candidates[indexPath.row]
+        cell.nameLabel.text = candidate
+        return cell
+    }
+    
+    private func showData(){
+        
     }
     private func getData(from url: String){
         let task = URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { data, response, error in
@@ -67,6 +95,30 @@ class CanidatesViewController: UIViewController {
 
     }
     
+//    class MyTableViewController: UITableViewController {
+//        var candidates: [String] = [] // Populate this with json.contests[i].candidates
+//
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//            tableView.dataSource = self
+//        }
+//
+//        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            return candidates.count
+//        }
+//
+//        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CandidateCell", for: indexPath) as! CandidateTableViewCell
+//            let candidate = candidates[indexPath.row]
+//            cell.NameLabel.text = candidate
+//            return cell
+//        }
+//    }
+    
+    struct groupRunning: Codable{
+        let runFor: String
+        var name = [String]()
+    }
     
     struct MyResult: Codable{
         let election: Election
@@ -75,6 +127,7 @@ class CanidatesViewController: UIViewController {
         var contests = [Contests]()
         //let state: [State]
     }
+    
 //
 //    struct Sources: Codable{
 //        let name: String
@@ -87,6 +140,7 @@ class CanidatesViewController: UIViewController {
         let electionDay: String
         let ocdDivisionId: String
     }
+    
     /*
     struct NormalizedInput: Codable{
         let line1: String
@@ -176,6 +230,7 @@ class CanidatesViewController: UIViewController {
         let sources: [Sources]
     }
      */
-    
 
 }
+
+

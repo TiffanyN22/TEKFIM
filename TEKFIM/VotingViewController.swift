@@ -23,7 +23,7 @@ class VotingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let camera =        GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 6.0)
         Map.camera = camera
         
     }
